@@ -1336,6 +1336,124 @@ body.deck-full #bnav,.login:not(.hide)~#bnav{display:none!important}
 .sp-b span{font-size:11.5px;color:var(--ink-3);font-weight:600;letter-spacing:.02em}.sp-b b{font-size:14px;color:var(--brand)}
 .sp-b:hover{border-color:var(--brand);box-shadow:0 4px 14px -6px rgba(79,70,229,.35)}
 @media(max-width:640px){.sub-pager{grid-template-columns:1fr 1fr}.sp-n{display:none}.sp-b{max-width:none;width:100%}}
+
+/* ===== gestão e análise avançada ===== */
+.ik-grid.gk{grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:0 0 18px}
+.ik-grid.gk .ik{background:var(--surface);padding:14px 16px;border-radius:14px}
+.ik-grid.gk .ik span{font-size:12px;color:var(--ink-3);font-weight:600;display:block}
+.ik-grid.gk .ik b{display:block;font-size:21px;font-weight:800;letter-spacing:-.02em;margin:4px 0 2px;color:var(--ink)}
+.ik-grid.gk .ik em{font-style:normal;font-size:12px;color:var(--ink-3)}
+.ik.k-ok{border-color:color-mix(in srgb,var(--pos) 35%,var(--line))}.ik.k-ok b{color:var(--pos)}
+.ik.k-bad{border-color:color-mix(in srgb,var(--neg) 35%,var(--line))}.ik.k-bad b{color:var(--neg)}
+.g-two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start}
+.g-two>.panel{margin-top:0}
+.gsvg{width:100%;height:auto;display:block;overflow:visible}
+.g-l{font-size:11px;fill:var(--ink-3)}.g-v{font-size:11px;font-weight:700;fill:var(--ink-2)}
+.g-grid{stroke:var(--line-2);stroke-width:1}.g-axis{stroke:var(--line);stroke-width:1.2}
+.wf-t{fill:var(--brand)}.wf-p{fill:var(--pos)}.wf-n{fill:var(--neg)}.wf-c{stroke:var(--ink-3);stroke-dasharray:3 3;stroke-width:1}
+.bm{fill:color-mix(in srgb,var(--brand) 28%,transparent)}.br-ok{fill:var(--pos)}.br-bad{fill:var(--neg)}
+.ln{stroke-width:2.6;stroke-linejoin:round;stroke-linecap:round}.lp{stroke:var(--surface);stroke-width:2}
+.ln.pess{stroke:#E11D48}.lp.pess{fill:#E11D48}.ln.base{stroke:#4F46E5}.lp.base{fill:#4F46E5}.ln.otim{stroke:#059669}.lp.otim{fill:#059669}
+.legend .lgi{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.lgi.pess{background:#E11D48}.lgi.base{background:#4F46E5}.lgi.otim{background:#059669}.lgi.bm{background:color-mix(in srgb,var(--brand) 28%,transparent)}.lgi.br-ok{background:var(--pos)}.lgi.br-bad{background:var(--neg)}
+td.pos{color:var(--pos)!important}
+.st-dot{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;padding:3px 9px;border-radius:999px}
+.st-dot::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.st-dot.ok{color:var(--pos);background:color-mix(in srgb,var(--pos) 10%,transparent)}.st-dot.bad{color:var(--neg);background:color-mix(in srgb,var(--neg) 10%,transparent)}
+.g-in{height:34px;width:120px;border:1px solid var(--line);border-radius:8px;background:var(--input);color:var(--ink);padding:0 10px;font:600 13px var(--font);text-align:right}
+.g-in.sm{width:74px;height:30px}.g-in:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px var(--accent-l);background:var(--surface)}
+.g-sel{height:36px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);padding:0 10px;font:600 13px var(--font)}
+.pj-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-bottom:18px}
+.pj-c{text-align:left;border:1px solid var(--line);background:var(--surface);border-radius:14px;padding:16px 18px;cursor:pointer;font:inherit;color:var(--ink);display:flex;flex-direction:column;gap:3px;position:relative;transition:border-color .15s,box-shadow .15s}
+.pj-c::before{content:"";position:absolute;left:0;top:14px;bottom:14px;width:4px;border-radius:0 4px 4px 0}
+.pj-c.pess::before{background:#E11D48}.pj-c.base::before{background:#4F46E5}.pj-c.otim::before{background:#059669}
+.pj-c span{font-size:12.5px;font-weight:700;color:var(--ink-3);text-transform:uppercase;letter-spacing:.05em}.pj-c b{font-size:22px;font-weight:800;letter-spacing:-.02em}.pj-c em{font-style:normal;font-size:12px;color:var(--ink-3)}.pj-c i{font-style:normal;font-size:12.5px;color:var(--ink-2);margin-top:6px}
+.pj-c.on{border-color:var(--brand);box-shadow:0 0 0 3px var(--accent-l)}
+.pj-form{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;padding:4px 20px 14px}
+.pj-f span{display:block;font-size:12px;font-weight:700;color:var(--ink-2);margin-bottom:6px}.pj-f div{display:flex;align-items:center;gap:8px}.pj-f .g-in{width:100%}.pj-f em{font-style:normal;font-size:11.5px;color:var(--ink-3);white-space:nowrap}
+.cy-e{fill:#F59E0B}.cy-p{fill:#4F46E5}.cy-f{fill:#E11D48}.cy-t{font-size:11.5px;font-weight:700;fill:#fff}.cy-l{stroke:var(--ink-3);stroke-dasharray:4 4}
+.pm-lv{display:grid;gap:10px;padding:6px 20px 4px}
+.pm-i{display:grid;grid-template-columns:1fr auto;gap:2px 12px;border:1px solid var(--line);border-left:4px solid var(--line);border-radius:10px;padding:10px 14px}
+.pm-i span{font-size:13px;font-weight:600}.pm-i b{grid-row:span 2;align-self:center;font-size:17px;font-weight:800}.pm-i em{font-style:normal;font-size:12px;color:var(--ink-3)}
+.pm-i.ok{border-left-color:var(--pos)}.pm-i.bad{border-left-color:var(--neg)}.pm-i.cur{border-left-color:var(--brand);background:var(--accent-l)}
+.pm-ctl{display:grid;gap:14px;padding:14px 20px 4px}.pm-ctl label{display:grid;gap:6px;font-size:13px;color:var(--ink-2)}.pm-ctl input[type=range]{width:100%;accent-color:var(--brand)}
+.pm-sim{font-size:13px;background:var(--surface-2);border-radius:10px;padding:10px 12px;color:var(--ink-2)}
+.dp-tree{display:flex;flex-direction:column;align-items:center;gap:10px;padding:10px 20px 22px}
+.dp-row{display:flex;align-items:stretch;gap:10px;flex-wrap:wrap;justify-content:center}
+.dp-n{border:1px solid var(--line);border-radius:12px;padding:12px 18px;min-width:190px;text-align:center;background:var(--surface-2)}
+.dp-n span{display:block;font-size:12px;font-weight:700;color:var(--ink-3)}.dp-n b{display:block;font-size:22px;font-weight:800;margin:4px 0;color:var(--ink)}.dp-n em{font-style:normal;font-size:11.5px;color:var(--ink-3);font-family:var(--mono)}
+.dp-n.top{background:var(--brand);border-color:var(--brand)}.dp-n.top span,.dp-n.top em{color:rgba(255,255,255,.8)}.dp-n.top b{color:#fff}.dp-n.neg b{color:var(--neg)}.dp-n.top.neg b{color:#FECACA}
+.dp-op{align-self:center;font-size:20px;font-weight:800;color:var(--ink-3)}.dp-roa{font-size:13px;color:var(--ink-2)}
+.al-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px}
+.al-c{border:1px solid var(--line);border-radius:14px;background:var(--surface);padding:14px 16px;display:flex;flex-direction:column;gap:12px;border-top:4px solid var(--pos)}
+.al-c.hit{border-top-color:var(--neg)}.al-c.off{opacity:.55;border-top-color:var(--line)}
+.al-h{display:flex;gap:10px;align-items:flex-start}.al-h>div{flex:1}.al-h b{display:block;font-size:14px}.al-h em{font-style:normal;font-size:12px;color:var(--ink-3)}
+.al-dot{width:10px;height:10px;border-radius:50%;background:var(--pos);margin-top:5px;flex:none;box-shadow:0 0 0 4px color-mix(in srgb,var(--pos) 15%,transparent)}
+.hit .al-dot,.al-c.hit .al-dot{background:var(--neg);box-shadow:0 0 0 4px color-mix(in srgb,var(--neg) 15%,transparent)}.al-c.off .al-dot{background:var(--ink-3);box-shadow:none}
+.al-m{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.al-m div{background:var(--surface-2);border-radius:8px;padding:7px 9px}.al-m span{display:block;font-size:11px;color:var(--ink-3)}.al-m b{font-size:13.5px}.al-m .hit{background:color-mix(in srgb,var(--neg) 9%,transparent)}.al-m .hit b{color:var(--neg)}
+.al-f{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:12.5px;color:var(--ink-2);flex-wrap:wrap}
+.lnk{border:0;background:none;color:var(--brand);font:700 12.5px var(--font);cursor:pointer;padding:0}.lnk:hover{text-decoration:underline}
+.sw-mini{position:relative;width:34px;height:20px;flex:none;cursor:pointer}.sw-mini input{opacity:0;position:absolute;inset:0;margin:0;cursor:pointer}.sw-mini i{position:absolute;inset:0;border-radius:20px;background:var(--line);transition:.15s;pointer-events:none}.sw-mini i::after{content:"";position:absolute;left:3px;top:3px;width:14px;height:14px;border-radius:50%;background:#fff;transition:.15s}.sw-mini input:checked+i{background:var(--brand)}.sw-mini input:checked+i::after{left:17px}
+.alr-ini{margin-bottom:18px;border-left:4px solid var(--pos)}.alr-ini.hit{border-left-color:var(--neg)}
+.ai-h{display:flex;align-items:center;gap:12px}.ai-h>div{flex:1}.ai-h b{display:block;font-size:15px}.ai-h em{font-style:normal;font-size:12.5px;color:var(--ink-3)}
+.ai-l{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.ai-chip{border:1px solid color-mix(in srgb,var(--neg) 30%,var(--line));background:color-mix(in srgb,var(--neg) 6%,var(--surface));color:var(--ink);border-radius:999px;padding:6px 12px;font:500 12.5px var(--font);cursor:pointer}.ai-chip b{color:var(--neg)}
+.ac-prog{height:6px;border-radius:4px;background:var(--surface-3);overflow:hidden;margin:-6px 0 16px}.ac-prog i{display:block;height:100%;background:var(--pos)}
+.ac-bar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:14px}
+.ac-board{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:start}
+.ac-col{background:var(--surface-2);border:1px solid var(--line);border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:10px;min-height:160px;transition:background .15s}
+.ac-col.over{background:var(--accent-l);border-color:var(--brand)}
+.ac-ch{display:flex;justify-content:space-between;align-items:center;padding:2px 4px}.ac-ch b{font-size:13px}.ac-ch span{font-size:12px;font-weight:700;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:1px 9px}
+.ac-card{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--line);border-radius:12px;padding:12px 14px;cursor:pointer;position:relative;transition:box-shadow .15s,transform .15s}
+.ac-card:hover{box-shadow:0 6px 18px -10px rgba(30,27,75,.35)}.ac-card.drag{opacity:.5}
+.ac-card.pr-alta{border-left-color:#E11D48}.ac-card.pr-media{border-left-color:#F59E0B}.ac-card.pr-baixa{border-left-color:#10B981}
+.ac-card p{margin:8px 0;font-size:13.5px;line-height:1.45;color:var(--ink)}
+.ac-top{display:flex;gap:6px}.ac-ar,.ac-pr{font-size:11px;font-weight:700;border-radius:6px;padding:2px 8px;background:var(--surface-3);color:var(--ink-2)}
+.ac-meta{display:flex;justify-content:space-between;gap:8px;font-size:12px;color:var(--ink-3)}.ac-meta span{display:inline-flex;align-items:center;gap:4px}.ac-meta .i{width:13px;height:13px}
+.ac-card.late .ac-dt{color:var(--neg);font-weight:700}
+.ac-mv{position:absolute;top:8px;right:8px;display:none;gap:4px}.ac-card:hover .ac-mv,.ac-card:focus-within .ac-mv{display:flex}
+.ac-mv button{width:24px;height:24px;border-radius:6px;border:1px solid var(--line);background:var(--surface);cursor:pointer;font-weight:800;color:var(--ink-2)}
+.ac-empty{font-size:12.5px;color:var(--ink-3);text-align:center;padding:18px 0}
+.ac-s{font-size:12px;font-weight:700;border-radius:999px;padding:3px 10px}.ac-s.todo{background:var(--surface-3)}.ac-s.doing{background:#FEF3C7;color:#92400E}.ac-s.done{background:#DCFCE7;color:#166534}
+tr.ac-late td{background:color-mix(in srgb,var(--neg) 4%,transparent)}
+.ac-f textarea,.ac-f select{width:100%;border-radius:10px;border:1px solid var(--line);background:var(--input);color:var(--ink);padding:10px 12px;font:500 14px var(--font);resize:vertical}
+.ac-f select{height:46px;padding:0 10px}.ac-f2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.ac-f2>div{display:grid;gap:6px}
+.ac-view{display:grid;grid-template-columns:1fr 1fr;gap:10px}.ac-view div{background:var(--surface-2);border-radius:10px;padding:10px 12px}.ac-view span{display:block;font-size:11.5px;color:var(--ink-3)}.ac-view p{grid-column:1/-1}
+.rx-bar{display:flex;justify-content:space-between;align-items:center;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin-bottom:18px}.rx-bar b{display:block}.rx-bar span{font-size:12.5px;color:var(--ink-3)}
+.rex-page{width:210mm;max-width:100%;min-height:297mm;margin:0 auto;background:#fff;color:#111827;padding:14mm 13mm;box-shadow:0 20px 50px -24px rgba(30,27,75,.4);border-radius:6px;font-size:11.5px;display:flex;flex-direction:column;gap:12px}
+.rx-h{display:flex;align-items:center;gap:14px;border-bottom:2px solid #4F46E5;padding-bottom:12px}.rx-h h1{font-size:22px;margin:0;font-weight:800;letter-spacing:-.02em;color:#111827}.rx-h p{margin:2px 0 0;color:#6B7280}.rx-d{margin-left:auto;color:#6B7280;font-size:11px}
+.rx-logo{width:52px;height:52px;object-fit:contain}.rx-mk{width:48px;height:48px;border-radius:12px;background:#4F46E5;color:#fff;display:grid;place-items:center;font-weight:800;font-size:13px}
+.rx-kg{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.rx-k{border:1px solid #E5E7EB;border-radius:8px;padding:8px 10px}.rx-k span{display:block;font-size:10px;color:#6B7280;font-weight:600;text-transform:uppercase;letter-spacing:.04em}.rx-k b{display:block;font-size:15.5px;margin:2px 0;color:#111827}.rx-k em{font-style:normal;font-size:10px;color:#6B7280}
+.rx-2{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:18px}
+.panel .legend{padding:4px 20px 14px}
+.cy-t{font-size:13px}
+.rex-page h2{font-size:12.5px;margin:4px 0 6px;color:#4F46E5;text-transform:uppercase;letter-spacing:.05em}
+.rx-t{width:100%;border-collapse:collapse;font-size:11px}.rx-t th,.rx-t td{padding:4px 6px;border-bottom:1px solid #EEF0F4;text-align:right}.rx-t th:first-child,.rx-t td:first-child{text-align:left}.rx-t tr.b td{font-weight:800;border-top:1.5px solid #111827}
+.rx-p{margin:0 0 6px;line-height:1.5}.rx-ul{margin:0;padding-left:16px;line-height:1.5}.rx-ul li{margin-bottom:4px}.rx-ul em{font-style:normal;color:#6B7280;font-size:10.5px}.rx-ul.al li::marker{color:#E11D48}
+.rx-f{margin-top:auto;display:flex;justify-content:space-between;border-top:1px solid #E5E7EB;padding-top:8px;color:#9CA3AF;font-size:10px}
+#rexp{display:none}
+@media print{body.rex-on>*:not(#rexp){display:none!important}body.rex-on #rexp{display:block!important}body.rex-on .rex-page{box-shadow:none;border-radius:0;width:auto;min-height:auto;padding:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}@page{size:A4;margin:12mm}}
+.hist{display:grid;gap:18px}
+.hist-head{display:flex;align-items:center;gap:16px;flex-wrap:wrap}.hist-ht{flex:1;min-width:180px}.hist-ht h3{margin:0}.hist-ht p{margin:2px 0 0;font-size:13px;color:var(--ink-3)}
+.hist-logo{width:84px;height:84px;border-radius:16px;border:1px solid var(--line);background:#fff;display:grid;place-items:center;overflow:hidden;flex:none}.hist-logo img{max-width:88%;max-height:88%;object-fit:contain}
+.hl-ph{display:grid;place-items:center;gap:2px;color:var(--ink-3);font-size:11px}.hl-ph .i{width:22px;height:22px}
+.hist-act{display:flex;gap:8px;flex-wrap:wrap}.hist-act label.btn{cursor:pointer}
+.hist-body{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:28px;margin-top:18px}
+.hist-txt p{margin:0 0 12px;line-height:1.7;color:var(--ink-2);font-size:14.5px}
+.hist-tl h4{margin:0 0 10px;font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-3)}
+.tl{list-style:none;margin:0;padding:0 0 0 18px;border-left:2px solid var(--line)}.tl li{position:relative;padding:0 0 16px 14px}.tl li::before{content:"";position:absolute;left:-25px;top:3px;width:12px;height:12px;border-radius:50%;background:var(--surface);border:3px solid var(--brand)}
+.tl span{font-size:12px;font-weight:800;color:var(--brand)}.tl p{margin:2px 0 0;font-size:13.5px;color:var(--ink-2);line-height:1.5}
+.gal-h{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.gal-h h3{margin:0}.gal-h p{margin:2px 0 0;font-size:12.5px;color:var(--ink-3)}.gal-h label.btn{cursor:pointer}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin-top:16px}
+.gal-i{margin:0;position:relative;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface-2)}
+.gal-img{display:block;width:100%;border:0;padding:0;background:none;cursor:zoom-in;aspect-ratio:4/3}.gal-img img{width:100%;height:100%;object-fit:cover;display:block}
+.gal-i figcaption{padding:8px 12px;font-size:12.5px;color:var(--ink-2);min-height:34px;outline:none}.gal-i figcaption[contenteditable]:focus{background:var(--accent-l)}
+.gal-del{position:absolute;top:8px;right:8px;width:30px;height:30px;border-radius:8px;border:0;background:rgba(17,24,39,.6);color:#fff;display:none;place-items:center;cursor:pointer}.gal-i:hover .gal-del{display:grid}.gal-del .i{width:15px;height:15px}
+.gal-empty{margin-top:16px;border:2px dashed var(--line);border-radius:14px;padding:34px 20px;display:grid;justify-items:center;gap:6px;text-align:center;color:var(--ink-3)}.gal-empty .i{width:30px;height:30px}.gal-empty b{color:var(--ink-2)}
+.gbox{position:fixed;inset:0;z-index:1400;background:rgba(10,10,20,.88);display:none;align-items:center;justify-content:center;padding:30px}
+.gbox.on{display:flex}.gbox figure{margin:0;max-width:min(1200px,92vw);text-align:center}.gbox img{max-width:100%;max-height:80vh;border-radius:10px}.gbox figcaption{color:#E5E7EB;margin-top:10px;font-size:14px}.gbox figcaption span{color:#9CA3AF;margin-left:10px;font-size:12px}
+.gb-n,.gb-x{position:absolute;border:0;background:rgba(255,255,255,.12);color:#fff;width:46px;height:46px;border-radius:50%;font-size:26px;cursor:pointer}.gb-n.p{left:20px;top:50%}.gb-n.n{right:20px;top:50%}.gb-x{top:20px;right:20px}
+@media(max-width:1100px){.ik-grid.gk{grid-template-columns:repeat(2,minmax(0,1fr))}.g-two{grid-template-columns:1fr}.pj-form{grid-template-columns:repeat(2,minmax(0,1fr))}.hist-body{grid-template-columns:1fr}}
+@media(max-width:640px){.pj-cards,.ac-board{grid-template-columns:1fr}.pj-form,.ac-f2,.rx-2,.al-m{grid-template-columns:1fr 1fr}.rx-kg{grid-template-columns:repeat(2,1fr)}.rx-bar{flex-direction:column;align-items:stretch}.dp-n{min-width:0;width:100%}.dp-op{display:none}.ik-grid.gk .ik b{font-size:18px}}
 </style>
 </head>
 <body>
@@ -3730,8 +3848,420 @@ const _rtuPw=renderTopUser; renderTopUser=function(){_rtuPw();const m=document.q
 
 const _cmCp=closeModal; closeModal=function(){_cmCp.apply(this,arguments);document.getElementById('ov').classList.remove('cp-on');};
 
+/* ================= ANÁLISE AVANÇADA + GESTÃO + HISTÓRIA ================= */
+IC.orc='<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/><circle cx="16" cy="9" r="1.5"/>';
+IC.proj='<path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/>';
+IC.ciclo='<path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/>';
+IC.pmin='<path d="M20.6 13.4l-7.2 7.2a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/>';
+IC.acao='<path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9"/>';
+IC.alr='<path d="M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/>';
+IC.rex='<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/>';
+IC.ges='<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/>';
+IC.img='<rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/>';
+IC.plus='<path d="M12 5v14M5 12h14"/>';
+IC.trash='<path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6"/>';
+IC.dl='<path d="M12 3v12M7 10l5 5 5-5M5 21h14"/>';
+
+VIEWS.orc={g:'Análise financeira',t:'Orçamento × realizado',d:'Metas mensais comparadas com o realizado e a decomposição de cada desvio em volume, margem e gastos fixos.',fin:1};
+VIEWS.proj={g:'Análise financeira',t:'Projeção de resultados',d:'Projeção de receita, resultado e caixa para os próximos seis meses em três cenários.',fin:1};
+VIEWS.ciclo={g:'Análise financeira',t:'Ciclo financeiro',d:'Prazos médios de estocagem, recebimento e pagamento, ciclo operacional e financeiro e a necessidade de capital de giro.',fin:1};
+VIEWS.pmin={g:'Análise financeira',t:'Custo por m³ e preço mínimo',d:'Quanto custa cada m³ vendido e qual o preço mínimo para cobrir os gastos e alcançar a margem desejada.',fin:1};
+VIEWS.acao={g:'Gestão',t:'Plano de ação',d:'Recomendações do estudo transformadas em ações com responsável, prazo e status.'};
+VIEWS.alr={g:'Gestão',t:'Alertas',d:'Indicadores monitorados com limites ajustáveis; o alerta acende quando o valor sai da faixa.'};
+VIEWS.rex={g:'Gestão',t:'Relatório executivo',d:'Resumo de uma página com os principais números, alertas e ações, pronto para salvar em PDF.'};
+['orc','proj','ciclo','pmin','acao','alr','rex'].forEach(v=>{if(!document.getElementById('v-'+v)){const d=document.createElement('div');d.id='v-'+v;d.className='hide';document.getElementById('v-ctb').after(d);}});
+if(typeof ROLES!=='undefined'&&ROLES.gestor.views) ROLES.gestor.views.push('orc','proj','ciclo','pmin','acao','alr','rex');
+(function(){const f=NAVS.find(s=>s.k==='fin');if(f){const i=f.items.findIndex(x=>x.v==='end');f.items.splice(i+1,0,{v:'orc'},{v:'proj'},{v:'ciclo'},{v:'pmin'});}
+  const c=NAVS.find(s=>s.k==='ctb');if(c) c.items.push({v:'ctb',l:'Análise Dupont',a:'ctb-dup'});
+  const k=NAVS.findIndex(s=>s.k==='ctb');NAVS.splice(k+1,0,{k:'ges',t:'Gestão',ico:'ges',items:[{v:'acao'},{v:'alr'},{v:'rex'}]});
+  const e=NAVS.find(s=>s.k==='emp');if(e) e.items.unshift({v:'emp',l:'História da empresa',a:'emp-hist'});})();
+
+const G={orc:3,pj:'base',pm:3,dup:3,acf:'all',aca:'all',acv:'board'};
+const canGes=()=>typeof CUR!=='undefined'&&!!CUR&&['autor','orient','gestor'].includes(CUR.r)&&PREF.banca!=='on';
+const jget=(k,d)=>{try{const v=JSON.parse(lsGet(k,'null'));return v==null?d:v}catch(e){return d}};
+const jset=(k,v)=>lsSet(k,JSON.stringify(v));
+const clone=o=>JSON.parse(JSON.stringify(o));
+const MES3=['Maio/26','Junho/26','Julho/26'];
+const segG=(n,cur,opts)=>`<div class="seg">${opts.map(([v,l])=>`<button class="${String(v)===String(cur)?'on':''}" data-gs="${n}:${v}">${l}</button>`).join('')}</div>`;
+const perSeg=n=>segG(n,G[n],PER.map((l,i)=>[i,l]));
+const kpG=(l,v,d,cls)=>`<div class="ik ${cls||''}"><span>${l}</span><b>${v}</b>${d?`<em>${d}</em>`:''}</div>`;
+const rs=v=>(v<0?'−':'')+'R$ '+fM(Math.abs(v));
+const rs0=v=>(v<0?'−':'')+'R$ '+fM0(Math.abs(v));
+const ppG=v=>(v>0?'+':'')+fN(v*100,2)+' p.p.';
+const mono=s=>`<span style="font-family:var(--mono);font-size:11.5px">${s}</span>`;
+function traceG(kicker,title,rows,note,concept){openModal({kicker,title,src:'',concept,body:`<div class="sec"><h3>Cálculo com os valores</h3><table class="mt"><thead><tr><th>Período</th><th>Cálculo</th><th class="r">Resultado</th></tr></thead><tbody>${rows.map(r=>`<tr><td>${r[0]}</td><td>${mono(esc(r[1]))}</td><td class="r"><b>${r[2]}</b></td></tr>`).join('')}</tbody></table>${note?`<p class="muted" style="margin-top:8px">${note}</p>`:''}</div>`});}
+
+/* ---------- gráficos simples ---------- */
+function wfSvg(items){ // [{l,v,t:'s'|'d'|'e'}]
+  const W=640,H=230,ml=10,mr=10,mt=24,mb=40,n=items.length,bw=(W-ml-mr)/n;let acc=0;const bars=items.map(it=>{let y0,y1;if(it.t==='d'){y0=acc;acc+=it.v;y1=acc;}else{y0=0;y1=it.v;acc=it.v;}return {...it,y0,y1};});
+  const vals=bars.flatMap(b=>[b.y0,b.y1,0]),mx=Math.max(...vals),mn=Math.min(...vals),Y=v=>mt+(mx-v)/(mx-mn||1)*(H-mt-mb);
+  return `<svg viewBox="0 0 ${W} ${H}" class="gsvg" role="img" aria-label="Decomposição do desvio">${bars.map((b,i)=>{const x=ml+i*bw+bw*.18,w=bw*.64,top=Y(Math.max(b.y0,b.y1)),h=Math.max(2,Math.abs(Y(b.y0)-Y(b.y1)));const cls=b.t!=='d'?'wf-t':b.v>=0?'wf-p':'wf-n';
+    return `<g data-tip="${esc(b.l)}: ${rs(b.v)}"><rect x="${x}" y="${top}" width="${w}" height="${h}" rx="4" class="${cls}"/>${i<n-1&&b.t!=='e'?`<line x1="${x+w}" x2="${x+bw}" y1="${Y(b.y1)}" y2="${Y(b.y1)}" class="wf-c"/>`:''}<text x="${x+w/2}" y="${top-6}" text-anchor="middle" class="g-v">${b.t==='d'&&b.v>0?'+':''}${fM0(b.v)}</text><text x="${x+w/2}" y="${H-mb+16}" text-anchor="middle" class="g-l">${esc(b.l)}</text></g>`;}).join('')}<line x1="${ml}" x2="${W-mr}" y1="${Y(0)}" y2="${Y(0)}" class="g-axis"/></svg>`;
+}
+function lineSvg(series,labels,fmt,opt){opt=opt||{};const W=640,H=opt.h||220,ml=64,mr=16,mt=16,mb=30;const all=series.flatMap(s=>s.v).concat(opt.zero?[0]:[]);let mx=Math.max(...all),mn=Math.min(...all);const pad=(mx-mn)*.12||Math.abs(mx)*.1||1;mx+=pad;mn-=pad;
+  const X=i=>ml+i*(W-ml-mr)/(labels.length-1),Y=v=>mt+(mx-v)/(mx-mn)*(H-mt-mb);let g='';
+  for(let k=0;k<=3;k++){const v=mn+(mx-mn)*k/3;g+=`<line x1="${ml}" x2="${W-mr}" y1="${Y(v)}" y2="${Y(v)}" class="g-grid"/><text x="${ml-8}" y="${Y(v)+4}" text-anchor="end" class="g-l">${fmt(v)}</text>`;}
+  labels.forEach((l,i)=>g+=`<text x="${X(i)}" y="${H-8}" text-anchor="middle" class="g-l">${esc(l)}</text>`);
+  if(opt.zero&&mn<0&&mx>0) g+=`<line x1="${ml}" x2="${W-mr}" y1="${Y(0)}" y2="${Y(0)}" class="g-axis"/>`;
+  series.forEach(s=>{g+=`<polyline fill="none" class="ln ${s.c}" points="${s.v.map((v,i)=>`${X(i)},${Y(v)}`).join(' ')}"/>`+s.v.map((v,i)=>`<circle cx="${X(i)}" cy="${Y(v)}" r="4" class="lp ${s.c}" data-tip="${esc(s.n)} · ${esc(labels[i])}: ${esc(opt.tip?opt.tip(v):fmt(v))}"/>`).join('');});
+  return `<svg viewBox="0 0 ${W} ${H}" class="gsvg" role="img" aria-label="${esc(opt.aria||'Gráfico')}">${g}</svg>`;}
+const lgd=a=>`<div class="legend">${a.map(([c,l])=>`<span><i class="lgi ${c}"></i>${l}</span>`).join('')}</div>`;
+
+/* =============== 1. ORÇAMENTO × REALIZADO =============== */
+const orcDef=(()=>{const p=P(3);const r=Math.round(p.R/3/5000)*5000,imc=Math.round(p.MCp*100)/100,cf=Math.round(p.CF/3/1000)*1000;return {r:[r,r,r],imc:[imc,imc,imc],cf:[cf,cf,cf]};});
+function orcGet(){const o=jget('cvl-orc',null);return o&&o.r&&o.r.length===3?o:orcDef();}
+function orcMeta(i){const o=orcGet();if(i<3){const R=o.r[i],IMC=o.imc[i],CF=o.cf[i];return {R,IMC,CV:R*(1-IMC),MC:R*IMC,CF,RES:R*IMC-CF};}
+  const a=[0,1,2].map(orcMeta),R=a.reduce((s,x)=>s+x.R,0),MC=a.reduce((s,x)=>s+x.MC,0),CF=a.reduce((s,x)=>s+x.CF,0);return {R,IMC:MC/R,CV:R-MC,MC,CF,RES:MC-CF};}
+function orcReal(i){const p=P(i);return {R:p.R,IMC:p.MCp,CV:p.CV,MC:p.MC,CF:p.CF,RES:p.RES};}
+function orcDec(i){const m=orcMeta(i),r=orcReal(i);return {m,r,vol:(r.R-m.R)*m.IMC,marg:r.R*(r.IMC-m.IMC),fix:-(r.CF-m.CF)};}
+const ORCR=[['Receita de vendas','R',1,0],['(−) Custos e despesas variáveis','CV',-1,1],['= Margem de contribuição','MC',1,5],['Índice de margem de contribuição','IMC',1,6],['(−) Custos e despesas fixos','CF',-1,2],['= Resultado gerencial','RES',1,7]];
+function renderOrc(){
+  const el=document.getElementById('v-orc');if(!el) return;const k=G.orc,m=orcMeta(k),r=orcReal(k),d=orcDec(k),ed=canGes(),o=orcGet();
+  const body=ORCR.map(([l,key,sg],ri)=>{const isP=key==='IMC',dv=r[key]-m[key],good=dv*sg>=-1e-9,pct=isP?null:(m[key]?dv/Math.abs(m[key]):null);
+    return `<tr class="${key==='RES'?'r-key':key==='MC'?'r-hl':''}" data-orcr="${ri}"><td>${l}</td><td>${isP?fP(m[key]):fM(m[key])}</td><td>${isP?fP(r[key]):fM(r[key])}</td><td class="${good?'pos':'neg'}">${isP?ppG(dv):(dv>0?'+':'')+fM(dv)}</td><td class="${good?'pos':'neg'}">${pct==null?'—':(pct>0?'+':'')+fP(pct)}</td><td style="text-align:center"><span class="st-dot ${good?'ok':'bad'}">${good?'favorável':'desfavorável'}</span></td>${trBtn()}</tr>`;}).join('');
+  const head=`<tr><th>${esc(PER[k])}</th><th>Meta</th><th>Realizado</th><th>Desvio</th><th>Desvio %</th><th style="text-align:center">Situação</th><th class="tr"></th></tr>`;
+  const wf=wfSvg([{l:'Resultado meta',v:m.RES,t:'s'},{l:'Volume de vendas',v:d.vol,t:'d'},{l:'Margem (preço, mix e custo)',v:d.marg,t:'d'},{l:'Gastos fixos',v:d.fix,t:'d'},{l:'Resultado real',v:r.RES,t:'e'}]);
+  const inp=(a,i,v,isP)=>ed?`<input class="g-in" type="number" step="${isP?'0.1':'1000'}" data-orcin="${a}:${i}" value="${isP?+(v*100).toFixed(2):Math.round(v)}">`:(isP?fP(v):fM(v));
+  const metas=`<tr><th>Metas mensais</th>${MES3.map(x=>`<th>${x}</th>`).join('')}<th>Trimestre</th></tr>`;
+  const mb=[['Receita de vendas (R$)','r',0],['Índice de margem de contribuição (%)','imc',1],['Custos e despesas fixos (R$)','cf',0]].map(([l,a,isP])=>`<tr><td>${l}</td>${[0,1,2].map(i=>`<td>${inp(a,i,o[a][i],isP)}</td>`).join('')}<td>${a==='imc'?fP(orcMeta(3).IMC):fM(a==='r'?orcMeta(3).R:orcMeta(3).CF)}</td></tr>`).join('')+`<tr class="r-hl"><td>= Resultado meta (R$)</td>${[0,1,2,3].map(i=>`<td>${fM(orcMeta(i).RES)}</td>`).join('')}</tr>`;
+  const bars=[0,1,2].map(i=>({m:orcMeta(i).RES,r:orcReal(i).RES})),bmx=Math.max(...bars.flatMap(b=>[b.m,b.r]))*1.15;
+  const bsvg=`<svg viewBox="0 0 420 200" class="gsvg" role="img" aria-label="Resultado meta e realizado por mês">${bars.map((b,i)=>{const x=40+i*130,h1=b.m/bmx*150,h2=b.r/bmx*150;return `<g><rect x="${x}" y="${170-h1}" width="34" height="${h1}" rx="4" class="bm" data-tip="Meta ${MES3[i]}: R$ ${fM(b.m)}"/><rect x="${x+40}" y="${170-h2}" width="34" height="${h2}" rx="4" class="${b.r>=b.m?'br-ok':'br-bad'}" data-tip="Realizado ${MES3[i]}: R$ ${fM(b.r)}"/><text x="${x+37}" y="190" text-anchor="middle" class="g-l">${MES3[i]}</text><text x="${x+57}" y="${164-h2}" text-anchor="middle" class="g-v">${fP(b.r/b.m-1).replace(/^(?!-)/,'+')}</text></g>`;}).join('')}<line x1="20" x2="410" y1="170" y2="170" class="g-axis"/></svg>`;
+  el.innerHTML=`
+  <div class="ik-grid gk">${kpG('Resultado realizado',rs0(r.RES),PER[k])}${kpG('Resultado meta',rs0(m.RES),'')}${kpG('Desvio do resultado',(r.RES-m.RES>=0?'+':'−')+'R$ '+fM0(Math.abs(r.RES-m.RES)),fP((r.RES-m.RES)/Math.abs(m.RES)),r.RES>=m.RES?'k-ok':'k-bad')}${kpG('Atingimento da receita',fP(r.R/m.R),'realizado ÷ meta')}</div>
+  ${panel('Meta × realizado','Comparação entre o orçamento e os valores realizados pelos relatórios de vendas e pelos gastos classificados na análise CVL. Clique em uma linha para ver o cálculo.','',head,body,perSeg('orc'),'Desvio favorável: receita e margem acima da meta, ou custos abaixo dela.')}
+  <div class="g-two">
+  <div class="panel"><div class="panel-head"><div><div class="panel-title">De onde vem o desvio do resultado</div><div class="panel-sub">${esc(PER[k])}: diferença entre o resultado real e a meta, separada em três efeitos que somam exatamente o desvio.</div></div></div><div class="chart" style="padding:8px 16px 0">${wf}</div>
+   <div class="note"><b>Volume</b> = (receita real − receita meta) × índice de MC da meta = (${fM(r.R)} − ${fM(m.R)}) × ${fP(m.IMC)} = ${fM(d.vol)}. <b>Margem</b> = receita real × (índice real − índice meta) = ${fM(r.R)} × (${fP(r.IMC)} − ${fP(m.IMC)}) = ${fM(d.marg)}; reúne preço, mix de produtos e custo variável. <b>Fixos</b> = −(fixos reais − fixos meta) = ${fM(d.fix)}.</div></div>
+  <div class="panel"><div class="panel-head"><div><div class="panel-title">Resultado por mês</div><div class="panel-sub">Meta (barra clara) e realizado; o percentual indica o desvio.</div></div></div><div class="chart" style="padding:8px 16px 0">${bsvg}</div>${lgd([['bm','Meta'],['br-ok','Realizado acima da meta'],['br-bad','Realizado abaixo da meta']])}</div>
+  </div>
+  ${panel('Metas do orçamento',ed?'Digite as metas de cada mês; o painel recalcula na hora e guarda neste navegador.':'Metas definidas pela gestão. Apenas autores, orientação e gestão podem alterá-las.','',metas,mb,ed?'<button class="btn" data-orcreset="1">Usar a média do trimestre</button>':'','As metas iniciais são a média mensal do trimestre (receita, índice de MC e gastos fixos), apenas como ponto de partida. Substitua pelo orçamento da empresa.')}`;
+}
+function traceOrc(ri){const [l,key,,src]=ORCR[ri];const isP=key==='IMC',f=v=>isP?fP(v):'R$ '+fM(v);
+  const rows=[0,1,2,3].map(i=>{const m=orcMeta(i),r=orcReal(i);const mc={R:'meta digitada',IMC:'meta digitada',CF:'meta digitada',CV:`${fM(m.R)} × (1 − ${fP(m.IMC)})`,MC:`${fM(m.R)} × ${fP(m.IMC)}`,RES:`${fM(m.MC)} − ${fM(m.CF)}`}[key];return [PER[i],`meta: ${i===3?'soma dos meses':mc} · real: ${DATA.financeiro[src].label}`,`${f(m[key])} → ${f(r[key])}`];});
+  traceG('Orçamento × realizado',l,rows,'O realizado vem da análise CVL (relatórios de vendas e gastos classificados em fixos e variáveis).');}
+
+/* =============== 2. PROJEÇÃO =============== */
+const PJD={pess:{n:'Pessimista',vol:-10,pa:0,dimc:-3,fa:MACRO.ipca.a12},base:{n:'Base',vol:0,pa:MACRO.ipca.a12,dimc:0,fa:MACRO.ipca.a12},otim:{n:'Otimista',vol:8,pa:MACRO.ipca.a12,dimc:2,fa:MACRO.ipca.a12}};
+const PJM=['Ago/26','Set/26','Out/26','Nov/26','Dez/26','Jan/27'];
+let PJ=jget('cvl-proj',null)||clone(PJD);
+function projBase(){const p=P(3),D=BPV('Disponível');return {R0:p.R/3,IMC0:p.MCp,CF0:p.CF/3,RES0:p.RES/3,C0:D[3],dh:(D[3]-D[0])/3};}
+function projCalc(s){const q=PJ[s],b=projBase();let c=b.C0;return PJM.map((m,j)=>{const t=(j+1)/12,R=b.R0*(1+q.vol/100)*Math.pow(1+q.pa/100,t),IMC=b.IMC0+q.dimc/100,CF=b.CF0*Math.pow(1+q.fa/100,t),MC=R*IMC,RES=MC-CF;c=c+b.dh+(RES-b.RES0);return {m,R,IMC,CV:R-MC,MC,CF,RES,PE:CF/IMC,MS:(R-CF/IMC)/R,C:c};});}
+function renderProj(){
+  const el=document.getElementById('v-proj');if(!el) return;const b=projBase(),S=['pess','base','otim'],C={};S.forEach(s=>C[s]=projCalc(s));const cur=G.pj,L=C[cur],q=PJ[cur];
+  const card=s=>{const t=C[s].reduce((a,x)=>a+x.RES,0),cx=C[s][5].C;return `<button class="pj-c ${s} ${s===cur?'on':''}" data-gs="pj:${s}"><span>${PJ[s].n}</span><b>${rs0(t)}</b><em>resultado em 6 meses</em><i>Caixa em jan/27: ${rs0(cx)}</i></button>`;};
+  const rows=[['Receita de vendas','R','m'],['(−) Custos e despesas variáveis','CV','m'],['= Margem de contribuição','MC','m'],['Índice de margem de contribuição','IMC','p'],['(−) Custos e despesas fixos','CF','m'],['= Resultado gerencial','RES','m'],['Ponto de equilíbrio contábil','PE','m'],['Margem de segurança','MS','p'],['Disponível no fim do mês','C','m']];
+  const head=`<tr><th>Cenário ${esc(q.n.toLowerCase())}</th>${PJM.map(x=>`<th>${x}</th>`).join('')}<th>6 meses</th></tr>`;
+  const tot=k=>k==='IMC'?L.reduce((a,x)=>a+x.MC,0)/L.reduce((a,x)=>a+x.R,0):k==='MS'?null:k==='PE'?null:k==='C'?L[5].C:L.reduce((a,x)=>a+x[k],0);
+  const body=rows.map(([l,k,t],ri)=>{const tv=tot(k);return `<tr class="${k==='RES'?'r-key':k==='MC'||k==='C'?'r-hl':''}" data-pjr="${ri}"><td>${l}</td>${L.map(x=>`<td class="${x[k]<0?'neg':''}">${t==='p'?fP(x[k]):fM(x[k])}</td>`).join('')}<td>${tv==null?'—':t==='p'?fP(tv):fM(tv)}</td></tr>`}).join('');
+  const inp=(f,l,u,st)=>`<label class="pj-f"><span>${l}</span><div><input class="g-in" type="number" step="${st}" data-pjin="${f}" value="${q[f]}"><em>${u}</em></div></label>`;
+  el.innerHTML=`
+  <div class="pj-cards">${S.map(card).join('')}</div>
+  <div class="g-two">
+   <div class="panel"><div class="panel-head"><div><div class="panel-title">Resultado gerencial projetado</div><div class="panel-sub">Resultado mensal de cada cenário, de agosto/2026 a janeiro/2027.</div></div></div><div class="chart" style="padding:8px 12px 0">${lineSvg(S.map(s=>({n:PJ[s].n,c:s,v:C[s].map(x=>x.RES)})),PJM,v=>fM0(v/1000)+' mil',{zero:1,tip:v=>'R$ '+fM(v),aria:'Resultado projetado por cenário'})}</div>${lgd([['pess','Pessimista'],['base','Base'],['otim','Otimista']])}</div>
+   <div class="panel"><div class="panel-head"><div><div class="panel-title">Disponível projetado</div><div class="panel-sub">Caixa, bancos e aplicações no fim de cada mês.</div></div></div><div class="chart" style="padding:8px 12px 0">${lineSvg(S.map(s=>({n:PJ[s].n,c:s,v:C[s].map(x=>x.C)})),PJM,v=>fN(v/1e6,2)+' mi',{tip:v=>'R$ '+fM(v),aria:'Disponível projetado por cenário'})}</div>${lgd([['pess','Pessimista'],['base','Base'],['otim','Otimista']])}</div>
+  </div>
+  <div class="panel"><div class="panel-head"><div><div class="panel-title">Premissas do cenário ${esc(q.n.toLowerCase())}</div><div class="panel-sub">Altere as premissas para simular; os valores ficam salvos neste navegador.</div></div><div><button class="btn" data-pjreset="1">Restaurar premissas</button></div></div>
+   <div class="pj-form">${inp('vol','Variação do volume vendido','% sobre a média','1')}${inp('pa','Reajuste de preços','% ao ano','0.1')}${inp('dimc','Variação do índice de MC','p.p.','0.5')}${inp('fa','Reajuste dos gastos fixos','% ao ano','0.1')}</div>
+   <div class="note">Ponto de partida: média mensal do trimestre — receita R$ ${fM(b.R0)}, índice de MC ${fP(b.IMC0)}, fixos R$ ${fM(b.CF0)}. Reajustes de referência pelo IPCA de 12 meses (${pc(MACRO.ipca.a12)}, aba Endividamento).</div></div>
+  ${panel('Projeção mês a mês',`Cenário ${q.n.toLowerCase()}. Clique em uma linha para ver o cálculo.`,'',head,body,segG('pj',cur,S.map(s=>[s,PJ[s].n])),`Disponível: parte de R$ ${fM(b.C0)} (31/07/2026) e soma a variação média mensal observada no trimestre (R$ ${fM(b.dh)}), ajustada pela diferença entre o resultado projetado e o resultado médio do trimestre (R$ ${fM(b.RES0)}). A projeção não considera sazonalidade, retiradas extraordinárias dos sócios nem investimentos.`)}`;
+}
+function traceProj(ri){const b=projBase(),q=PJ[G.pj],L=projCalc(G.pj);const ks=['R','CV','MC','IMC','CF','RES','PE','MS','C'],k=ks[ri];const nm=['Receita de vendas','Custos e despesas variáveis','Margem de contribuição','Índice de margem de contribuição','Custos e despesas fixos','Resultado gerencial','Ponto de equilíbrio contábil','Margem de segurança','Disponível no fim do mês'][ri];
+  const rows=L.map((x,j)=>{const t=`(${j+1}/12)`;const c={R:`${fM(b.R0)} × (1 ${q.vol<0?'−':'+'} ${fN(Math.abs(q.vol),1)}%) × (1 + ${fN(q.pa,2)}%)^${t}`,CV:`${fM(x.R)} − ${fM(x.MC)}`,MC:`${fM(x.R)} × ${fP(x.IMC)}`,IMC:`${fP(b.IMC0)} ${q.dimc<0?'−':'+'} ${fN(Math.abs(q.dimc),1)} p.p.`,CF:`${fM(b.CF0)} × (1 + ${fN(q.fa,2)}%)^${t}`,RES:`${fM(x.MC)} − ${fM(x.CF)}`,PE:`${fM(x.CF)} ÷ ${fP(x.IMC)}`,MS:`(${fM(x.R)} − ${fM(x.PE)}) ÷ ${fM(x.R)}`,C:`saldo anterior + ${fM(b.dh)} + (${fM(x.RES)} − ${fM(b.RES0)})`}[k];return [x.m,c,k==='IMC'||k==='MS'?fP(x[k]):'R$ '+fM(x[k])];});
+  traceG('Projeção · cenário '+q.n.toLowerCase(),nm,rows,'Base: média mensal do trimestre maio a julho/2026 na análise CVL.');}
+
+/* =============== 3. CICLO FINANCEIRO =============== */
+const cmvOf=i=>-(BV('mp',i)+BV('mod',i)+BV('oc',i));
+function cicloCalc(i){const b=BALD.bs;let est,dias;if(i<3){est=(b.est[i]+b.est[i+1])/2;dias=30;}else{est=b.est.reduce((a,x)=>a+x,0)/4;dias=90;}const cm=cmvOf(i),pme=est/cm*dias,pmr=0,pmp=pmpDias(i);return {est,cm,dias,pme,pmr,pmp,co:pme+pmr,cf:pme+pmr-pmp};}
+function fleur(j){const v=l=>BPV(l)[j];const ACO=v('Outros créditos')+v('Estoques')+v('Despesas pagas antecipadamente'),PCO=v('Fornecedores')+v('Obrigações tributárias')+v('Obrigações trabalhistas e provisões')+v('Outras obrigações'),ACF=v('Disponível'),PCF=v('Lucros a pagar'),CDG=v('Patrimônio líquido ajustado')+v('Passivo não circulante')-v('Ativo não circulante');return {ACO,PCO,ACF,PCF,NCG:ACO-PCO,CDG,T:ACF-PCF};}
+function fleurTipo(f){const s=[f.CDG>0,f.NCG>0,f.T>0].map(x=>x?'+':'−').join('');return ({'+−+':['I','Excelente','sobra capital de giro e a operação ainda gera recursos'],'+++':['II','Sólida','o capital próprio financia toda a necessidade de giro e ainda sobra caixa'],'++−':['III','Insatisfatória','o capital de giro não cobre a necessidade; depende de crédito de curto prazo'],'−+−':['IV','Péssima','a necessidade de giro é financiada por dívidas de curto prazo'],'−−−':['V','Muito ruim','estrutura financeira frágil'],'−−+':['VI','Alto risco','a folga de caixa vem de passivos operacionais']})[s]||['—','—',''];}
+function renderCiclo(){
+  const el=document.getElementById('v-ciclo');if(!el) return;const C=[0,1,2,3].map(cicloCalc),t=C[3],F=[0,1,2,3].map(fleur),ft=fleurTipo(F[3]);
+  const mx=Math.max(t.co,t.pmp)*1.08,W=1100,X=d=>40+d/mx*(W-80);
+  const tl=`<svg viewBox="0 0 ${W} 170" class="gsvg" role="img" aria-label="Linha do tempo do ciclo financeiro"><text x="40" y="22" class="g-l">Compra da matéria-prima</text>
+   <rect x="${X(0)}" y="34" width="${X(t.pme)-X(0)}" height="26" rx="5" class="cy-e" data-tip="Prazo médio de estocagem: ${fN(t.pme,0)} dias"/><text x="${(X(0)+X(t.pme))/2}" y="52" text-anchor="middle" class="cy-t">Estocagem · ${fN(t.pme,0)} dias</text>
+   <rect x="${X(0)}" y="74" width="${Math.max(3,X(t.pmp)-X(0))}" height="26" rx="5" class="cy-p" data-tip="Prazo médio de pagamento: ${fN(t.pmp,0)} dias"/><text x="${(X(0)+X(t.pmp))/2}" y="92" text-anchor="middle" class="cy-t">Pagamento ao fornecedor · ${fN(t.pmp,0)} dias</text>
+   <rect x="${X(t.pmp)}" y="114" width="${Math.max(3,X(t.co)-X(t.pmp))}" height="26" rx="5" class="cy-f" data-tip="Ciclo financeiro: ${fN(t.cf,0)} dias"/><text x="${(X(t.pmp)+X(t.co))/2}" y="132" text-anchor="middle" class="cy-t">Ciclo financeiro · ${fN(t.cf,0)} dias</text>
+   <line x1="${X(t.co)}" x2="${X(t.co)}" y1="28" y2="146" class="cy-l"/><text x="${X(t.co)}" y="162" text-anchor="end" class="g-l">Venda e recebimento (dia ${fN(t.co,0)})</text></svg>`;
+  const R=[['Prazo médio de estocagem (PME)','pme','estoque médio ÷ custo dos produtos vendidos × dias'],['Prazo médio de recebimento (PMR)','pmr','clientes médios ÷ receita × dias'],['= Ciclo operacional','co','PME + PMR'],['(−) Prazo médio de pagamento (PMP)','pmp','fornecedores médios ÷ compras a prazo × dias'],['= Ciclo financeiro','cf','ciclo operacional − PMP']];
+  const head=`<tr><th>Prazos médios (dias)</th>${PER.map(x=>`<th>${x}</th>`).join('')}<th class="tr"></th></tr>`;
+  const body=R.map(([l,k,f],ri)=>`<tr class="${k==='cf'?'r-key':k==='co'?'r-hl':''}" data-cyr="${ri}"><td>${l}<div class="sub-f">${f}</div></td>${C.map(c=>`<td>${fN(c[k],1)}</td>`).join('')}${trBtn()}</tr>`).join('');
+  const FR=[['Ativo circulante operacional (ACO)','ACO','outros créditos + estoques + despesas antecipadas'],['(−) Passivo circulante operacional (PCO)','PCO','fornecedores + obrigações tributárias, trabalhistas e outras'],['= Necessidade de capital de giro (NCG)','NCG','ACO − PCO'],['Capital de giro (CDG)','CDG','PL ajustado + PNC − ativo não circulante'],['Saldo de tesouraria (T)','T','disponível − passivo financeiro de curto prazo']];
+  const fh=`<tr><th>Modelo dinâmico (Fleuriet)</th>${['30/04/26','31/05/26','30/06/26','31/07/26'].map(x=>`<th>${x}</th>`).join('')}<th class="tr"></th></tr>`;
+  const fb=FR.map(([l,k,f],ri)=>`<tr class="${k==='NCG'||k==='T'?'r-hl':''}" data-fl="${ri}"><td>${l}<div class="sub-f">${f}</div></td>${F.map(x=>`<td class="${x[k]<0?'neg':''}">${fM(x[k])}</td>`).join('')}${trBtn()}</tr>`).join('')+`<tr><td>Tipo de estrutura</td>${F.map(x=>{const q=fleurTipo(x);return `<td><b>Tipo ${q[0]} · ${q[1]}</b></td>`}).join('')}<td></td></tr>`;
+  el.innerHTML=`
+  <div class="ik-grid gk">${kpG('Ciclo operacional',fN(t.co,0)+' dias','trimestre')}${kpG('Ciclo financeiro',fN(t.cf,0)+' dias','dias que a empresa financia a operação')}${kpG('Necessidade de capital de giro',rs0(F[3].NCG),'31/07/2026')}${kpG('Estrutura financeira','Tipo '+ft[0]+' · '+ft[1],'modelo Fleuriet',ft[0]==='I'||ft[0]==='II'?'k-ok':'k-bad')}</div>
+  <div class="panel"><div class="panel-head"><div><div class="panel-title">Linha do tempo do ciclo (trimestre)</div><div class="panel-sub">Do momento da compra da matéria-prima até o recebimento da venda.</div></div></div><div class="chart" style="padding:10px 16px 4px">${tl}</div><div class="note">A empresa paga os fornecedores em cerca de ${fN(t.pmp,0)} dias, mas a madeira fica em média ${fN(t.pme,0)} dias em estoque: durante ${fN(t.cf,0)} dias a operação é financiada com recursos próprios. Como os balancetes não mostram saldo de clientes, as vendas são tratadas como recebidas no mês (PMR = 0).</div></div>
+  ${panel('Prazos médios e ciclos',"Calculados com os balancetes. Clique em uma linha para ver o cálculo.",'',head,body,'',`O estoque aparece com o mesmo saldo (R$ ${fM(BALD.bs.est[0])}) nos quatro balancetes, ou seja, não é atualizado mês a mês; o PME é uma estimativa e ganha precisão com o inventário mensal.`)}
+  ${panel('Necessidade de capital de giro',`Reclassificação do balanço em contas operacionais, financeiras e permanentes. Em 31/07/2026: ${ft[2]}.`,'',fh,fb,'','Capital de giro − NCG = saldo de tesouraria. Saldo de tesouraria positivo e alto indica folga financeira; aqui ele é formado principalmente por caixa e aplicações.')}`;
+}
+function traceCiclo(ri){const k=['pme','pmr','co','pmp','cf'][ri],nm=['Prazo médio de estocagem','Prazo médio de recebimento','Ciclo operacional','Prazo médio de pagamento','Ciclo financeiro'][ri],b=BALD.bs;
+  const rows=[0,1,2,3].map(i=>{const c=cicloCalc(i);const f={pme:`${fM(c.est)} ÷ ${fM(c.cm)} × ${c.dias}`,pmr:'sem saldo de clientes nos balancetes',co:`${fN(c.pme,1)} + ${fN(c.pmr,1)}`,pmp:i<3?`((${fM(b.forn[i])} + ${fM(b.forn[i+1])}) ÷ 2) ÷ ${fM(b.cpz[i])} × 30`:`fornecedores médios ÷ ${fM(b.cpz.reduce((a,x)=>a+x,0))} × 90`,cf:`${fN(c.co,1)} − ${fN(c.pmp,1)}`}[k];return [PER[i],f,fN(c[k],1)+' dias'];});
+  traceG('Ciclo financeiro',nm,rows,'Custo dos produtos vendidos = matéria-prima aplicada + mão de obra direta + outros custos de produção (DRE contábil). Estoque médio = média dos saldos inicial e final do período.');}
+function traceFleur(ri){const k=['ACO','PCO','NCG','CDG','T'][ri],nm=['Ativo circulante operacional','Passivo circulante operacional','Necessidade de capital de giro','Capital de giro','Saldo de tesouraria'][ri],d=['30/04/2026','31/05/2026','30/06/2026','31/07/2026'];
+  const rows=[0,1,2,3].map(j=>{const v=l=>fM(BPV(l)[j]),f=fleur(j);const c={ACO:`${v('Outros créditos')} + ${v('Estoques')} + ${v('Despesas pagas antecipadamente')}`,PCO:`${v('Fornecedores')} + ${v('Obrigações tributárias')} + ${v('Obrigações trabalhistas e provisões')} + ${v('Outras obrigações')}`,NCG:`${fM(f.ACO)} − ${fM(f.PCO)}`,CDG:`${v('Patrimônio líquido ajustado')} + ${v('Passivo não circulante')} − ${v('Ativo não circulante')}`,T:`${v('Disponível')} − ${v('Lucros a pagar')}`}[k];return [d[j],c,'R$ '+fM(f[k])];});
+  traceG('Necessidade de capital de giro',nm,rows,'Saldos dos balancetes. Conferência: capital de giro − NCG = saldo de tesouraria.');}
+
+/* =============== 4. CUSTO POR m³ E PREÇO MÍNIMO =============== */
+G.pmm=+lsGet('cvl-pmm','15');G.pmv=null;
+function pmCalc(k,m,Vs){const p=P(k),V=Vs||p.VOL,cv=p.CV/p.VOL,mp=p.MP/p.VOL,cf=p.CF/V;return {V,V0:p.VOL,pr:p.R/p.VOL,cv,mp,ocv:cv-mp,cf,ct:cv+cf,res:p.R/p.VOL-cv-p.CF/p.VOL,p1:cv,p2:cv+cf,p3:(cv+cf)/(1-m)};}
+function renderPmin(){
+  const el=document.getElementById('v-pmin');if(!el) return;const k=G.pm,m=G.pmm/100,c=pmCalc(k,m),p=P(k);
+  const Vs=G.pmv||c.V0,s=pmCalc(k,m,Vs);
+  const R=[['Volume vendido (m³)','V0','n'],['Preço médio realizado por m³','pr','m'],['(−) Matéria-prima por m³','mp','m'],['(−) Demais custos variáveis por m³','ocv','m'],['= Margem de contribuição por m³','mcu','m'],['(−) Gastos fixos por m³','cf','m'],['= Resultado por m³','res','m']];
+  c.mcu=c.pr-c.cv;
+  const head=`<tr><th>Custo por m³ · ${esc(PER[k])}</th><th>Valor</th><th>% do preço</th><th class="tr"></th></tr>`;
+  const body=R.map(([l,key,t],ri)=>`<tr class="${key==='res'?'r-key':key==='mcu'?'r-hl':''}" data-pmr="${ri}"><td>${l}</td><td>${t==='n'?fN(c[key],2):fM(c[key])}</td><td>${t==='n'?'—':fP(c[key]/c.pr)}</td>${trBtn()}</tr>`).join('');
+  const L=mgList(k),gh=`<tr><th>Grupo de madeira</th><th>m³ vendidos</th><th>MP por m³</th><th>Preço mínimo por m³</th><th>Preço realizado por m³</th><th>Folga</th></tr>`;
+  const gb=L.map(o=>{const mpg=o.custo/o.m3,pm=(mpg+c.ocv+c.cf)/(1-m),fo=o.pr/pm-1;return `<tr><td>${esc(o.nome)}</td><td>${fN(o.m3,2)}</td><td>${fM(mpg)}</td><td>${fM(pm)}</td><td>${fM(o.pr)}</td><td class="${fo<0?'neg':'pos'}">${(fo>0?'+':'')+fP(fo)}</td></tr>`}).join('');
+  const lv=[['Cobre só os custos variáveis','p1','abaixo disso, cada m³ vendido aumenta o prejuízo'],['Cobre variáveis e fixos (equilíbrio)','p2','resultado zero no volume atual'],[`Garante margem de ${fN(G.pmm,1)}% sobre a venda`,'p3','preço-alvo para o volume atual']];
+  el.innerHTML=`
+  <div class="ik-grid gk">${kpG('Preço médio realizado','R$ '+fM(c.pr)+'/m³',PER[k])}${kpG('Custo total por m³','R$ '+fM(c.ct)+'/m³','variáveis + fixos')}${kpG('Preço de equilíbrio','R$ '+fM(c.p2)+'/m³','folga de '+fP(c.pr/c.p2-1))}${kpG('Preço com margem-alvo','R$ '+fM(c.p3)+'/m³',fN(G.pmm,1)+'% de margem',c.pr>=c.p3?'k-ok':'k-bad')}</div>
+  <div class="g-two">
+  ${panel('Composição do custo por m³','Gastos do período divididos pelo volume vendido. Clique em uma linha para ver o cálculo.','',head,body,perSeg('pm'),'O volume considera os itens com dimensões completas nos relatórios de vendas; por isso os valores por m³ podem estar levemente superestimados.')}
+  <div class="panel"><div class="panel-head"><div><div class="panel-title">Preço mínimo por m³</div><div class="panel-sub">Três níveis de preço para o mix médio de produtos.</div></div></div>
+   <div class="pm-lv">${lv.map(([l,key,d])=>`<div class="pm-i ${c.pr>=c[key]?'ok':'bad'}"><span>${l}</span><b>R$ ${fM(c[key])}</b><em>${d}</em></div>`).join('')}<div class="pm-i cur"><span>Preço médio realizado</span><b>R$ ${fM(c.pr)}</b><em>${c.pr>=c.p3?'acima do preço-alvo':'abaixo do preço-alvo'}</em></div></div>
+   <div class="pm-ctl"><label>Margem desejada sobre a venda <b>${fN(G.pmm,1)}%</b><input type="range" min="0" max="40" step="0.5" value="${G.pmm}" data-pmm="1"></label>
+   <label>Volume simulado <b>${fN(Vs,0)} m³</b> <span class="muted">(real: ${fN(c.V0,0)} m³)</span><input type="range" min="${Math.round(c.V0*.5)}" max="${Math.round(c.V0*1.5)}" step="1" value="${Math.round(Vs)}" data-pmv="1"></label>
+   <div class="pm-sim">Com ${fN(Vs,0)} m³, os fixos ficam em <b>R$ ${fM(s.cf)}/m³</b>: preço de equilíbrio <b>R$ ${fM(s.p2)}</b> e preço com margem <b>R$ ${fM(s.p3)}</b>.</div></div>
+   <div class="note">Preço com margem = (custo variável por m³ + fixos por m³) ÷ (1 − margem). Mais volume dilui os gastos fixos e reduz o preço mínimo.</div></div>
+  </div>
+  ${panel('Preço mínimo por grupo de madeira','Matéria-prima própria de cada grupo + demais custos variáveis e fixos médios por m³, com a margem desejada. Folga = preço realizado ÷ preço mínimo − 1.','',gh,gb,'',`Demais custos variáveis (R$ ${fM(c.ocv)}/m³) e fixos (R$ ${fM(c.cf)}/m³) rateados igualmente por m³. Grupos com folga negativa vendem abaixo do preço que garante a margem de ${fN(G.pmm,1)}%.`)}`;
+}
+function tracePmin(ri){const k=G.pm,c=pmCalc(k,G.pmm/100),p=P(k);c.mcu=c.pr-c.cv;const key=['V0','pr','mp','ocv','mcu','cf','res'][ri],nm=['Volume vendido','Preço médio realizado por m³','Matéria-prima por m³','Demais custos variáveis por m³','Margem de contribuição por m³','Gastos fixos por m³','Resultado por m³'][ri];
+  const f={V0:'soma dos m³ dos itens vendidos com dimensões completas',pr:`${fM(p.R)} ÷ ${fN(p.VOL,2)}`,mp:`${fM(p.MP)} ÷ ${fN(p.VOL,2)}`,ocv:`(${fM(p.CV)} − ${fM(p.MP)}) ÷ ${fN(p.VOL,2)}`,mcu:`${fM(c.pr)} − ${fM(c.cv)}`,cf:`${fM(p.CF)} ÷ ${fN(p.VOL,2)}`,res:`${fM(c.pr)} − ${fM(c.cv)} − ${fM(c.cf)}`}[key];
+  traceG('Custo por m³',nm,[[PER[k],f,key==='V0'?fN(c[key],2)+' m³':'R$ '+fM(c[key])]],'Receita, gastos variáveis, matéria-prima e fixos da análise CVL do período.');}
+
+/* =============== 5. DUPONT (Indicadores contábeis) =============== */
+function dupCalc(i){const AT=BPV('Ativo total'),PL=BPV('Patrimônio líquido ajustado'),at=i<3?(AT[i]+AT[i+1])/2:(AT[0]+AT[1]+AT[2]+AT[3])/4,pl=i<3?(PL[i]+PL[i+1])/2:(PL[0]+PL[1]+PL[2]+PL[3])/4,rb=BV('rb',i),ll=BALD.lucro[i];return {rb,ll,at,pl,ml:ll/rb,ga:rb/at,mf:at/pl,roa:ll/at,roe:ll/pl};}
+function dupHtml(){const k=G.dup,d=dupCalc(k),D=[0,1,2,3].map(dupCalc);
+  const nd=(l,v,s,cls)=>`<div class="dp-n ${cls||''}"><span>${l}</span><b>${v}</b><em>${s}</em></div>`;
+  const tree=`<div class="dp-tree">${nd('Retorno sobre o PL (ROE)',fP(d.roe),'lucro líquido ÷ PL médio','top '+(d.roe<0?'neg':''))}<div class="dp-op">=</div>
+   <div class="dp-row">${nd('Margem líquida',fP(d.ml),`${rs0(d.ll)} ÷ ${rs0(d.rb)}`,d.ml<0?'neg':'')}<div class="dp-op">×</div>${nd('Giro do ativo',fN(d.ga,3)+'×',`${rs0(d.rb)} ÷ ${rs0(d.at)}`)}<div class="dp-op">×</div>${nd('Multiplicador do PL',fN(d.mf,3)+'×',`${rs0(d.at)} ÷ ${rs0(d.pl)}`)}</div>
+   <div class="dp-roa">ROA = margem × giro = <b>${fP(d.roa)}</b></div></div>`;
+  const R=[['Margem líquida','ml','p'],['× Giro do ativo','ga','x'],['= Retorno sobre o ativo (ROA)','roa','p'],['× Multiplicador do PL','mf','x'],['= Retorno sobre o PL (ROE)','roe','p']];
+  const head=`<tr><th>Análise Dupont</th>${PER.map(x=>`<th>${x}</th>`).join('')}<th class="tr"></th></tr>`;
+  const body=R.map(([l,key,t],ri)=>`<tr class="${key==='roe'?'r-key':key==='roa'?'r-hl':''}" data-dup="${ri}"><td>${l}</td>${D.map(x=>`<td class="${x[key]<0?'neg':''}">${t==='p'?fP(x[key]):fN(x[key],3)+'×'}</td>`).join('')}${trBtn()}</tr>`).join('');
+  const lo=D[0].roe<0?'Em maio, a margem líquida negativa levou o ROE abaixo de zero; ':'';
+  return `<div id="ctb-dup"><div class="panel"><div class="panel-head"><div><div class="panel-title">Análise Dupont</div><div class="panel-sub">Decompõe o retorno sobre o patrimônio líquido em lucratividade, eficiência no uso dos ativos e alavancagem.</div></div><div>${perSeg('dup')}</div></div>${tree}</div>
+   ${panel('Decomposição por período','Valores contábeis dos balancetes; retornos do período, sem anualizar. Clique em uma linha para ver o cálculo.','',head,body,'',`${lo}o multiplicador perto de 1 mostra que a empresa quase não usa capital de terceiros: o retorno depende da margem e do giro. O giro baixo reflete o volume de caixa e estoque parados no ativo.`)}</div>`;}
+function traceDup(ri){const key=['ml','ga','roa','mf','roe'][ri],nm=['Margem líquida','Giro do ativo','Retorno sobre o ativo','Multiplicador do PL','Retorno sobre o PL'][ri];
+  const rows=[0,1,2,3].map(i=>{const d=dupCalc(i);const f={ml:`${fM(d.ll)} ÷ ${fM(d.rb)}`,ga:`${fM(d.rb)} ÷ ${fM(d.at)}`,roa:`${fP(d.ml)} × ${fN(d.ga,3)}`,mf:`${fM(d.at)} ÷ ${fM(d.pl)}`,roe:`${fP(d.ml)} × ${fN(d.ga,3)} × ${fN(d.mf,3)}`}[key];return [PER[i],f,key==='ga'||key==='mf'?fN(d[key],3)+'×':fP(d[key])];});
+  traceG('Análise Dupont',nm,rows,'Lucro líquido e receita bruta dos balancetes; ativo total e PL ajustado médios do período.');}
+const _rcDup=renderCtb; renderCtb=function(){_rcDup();const el=document.getElementById('v-ctb');if(!el) return;el.insertAdjacentHTML('beforeend',dupHtml());const tb=el.querySelector('.ctb-tabs');if(tb&&!tb.querySelector('[data-ctbgo="ctb-dup"]')) tb.insertAdjacentHTML('beforeend','<button data-ctbgo="ctb-dup">Dupont</button>');};
+
+/* =============== 6. ALERTAS =============== */
+const ALR=[
+ {k:'ms',t:'Margem de segurança baixa',d:'Quanto as vendas podem cair antes de chegar ao ponto de equilíbrio.',op:'<',lim:30,u:'%',fn:i=>P(i).MS,v:'fin'},
+ {k:'imc',t:'Índice de margem de contribuição baixo',d:'Parcela de cada real vendido que sobra para pagar os fixos.',op:'<',lim:60,u:'%',fn:i=>P(i).MCp,v:'fin'},
+ {k:'res',t:'Resultado gerencial negativo',d:'Margem de contribuição menor que os gastos fixos no mês.',op:'<',lim:0,u:'R$',fn:i=>P(i).RES,v:'fin'},
+ {k:'ll',t:'Prejuízo contábil no mês',d:'Lucro líquido negativo nos balancetes.',op:'<',lim:0,u:'R$',fn:i=>BALD.lucro[i],v:'ctb'},
+ {k:'ebitda',t:'EBITDA contábil negativo',d:'Operação não gera caixa antes da depreciação.',op:'<',lim:0,u:'R$',fn:i=>BV('ebitda',i),v:'ctb'},
+ {k:'orc',t:'Resultado abaixo da meta',d:'Desvio do resultado gerencial em relação ao orçamento.',op:'<',lim:-10,u:'%',fn:i=>{const m=orcMeta(i).RES;return (orcReal(i).RES-m)/Math.abs(m);},v:'orc'},
+ {k:'rec',t:'Receita contabilizada diferente das vendas',d:'Diferença entre a receita dos balancetes e a dos relatórios de vendas.',op:'>',lim:5,u:'%',fn:i=>Math.abs(BV('rb',i)/P(i).R-1),v:'dfc'},
+ {k:'lc',t:'Liquidez corrente baixa',d:'Ativo circulante para cada real de passivo circulante.',op:'<',lim:1.5,u:'×',fn:i=>BPV('Ativo circulante')[i+1]/BPV('Passivo circulante')[i+1],v:'ctb'},
+ {k:'end',t:'Endividamento elevado',d:'Passivo total sobre o ativo total.',op:'>',lim:50,u:'%',fn:i=>(BPV('Passivo circulante')[i+1]+BPV('Passivo não circulante')[i+1])/BPV('Ativo total')[i+1],v:'end'},
+ {k:'cyc',t:'Ciclo financeiro longo',d:'Dias em que a operação é financiada com recursos próprios.',op:'>',lim:90,u:'dias',fn:i=>cicloCalc(i).cf,v:'ciclo'},
+ {k:'cx',t:'Muito dinheiro em espécie',d:'Saldo da conta Caixa (dinheiro físico) sobre o ativo total; recurso que não rende e exige controle.',op:'>',lim:10,u:'%',fn:i=>BPV('Caixa')[i+1]/BPV('Ativo total')[i+1],v:'end'},
+];
+function alrCfg(){return jget('cvl-alr',{});}
+function alrLim(a){const c=alrCfg()[a.k];return c&&c.lim!=null?c.lim:a.lim;}
+function alrOn(a){const c=alrCfg()[a.k];return !(c&&c.off);}
+const alrScale=a=>a.u==='%'?100:1;
+function alrHit(a,i){const v=a.fn(i)*alrScale(a),l=alrLim(a);return a.op==='<'?v<l:v>l;}
+function alrFmt(a,v){const x=v*alrScale(a);return a.u==='%'?fN(x,1)+'%':a.u==='R$'?rs0(v):a.u==='×'?fN(x,2)+'×':fN(x,0)+' dias';}
+function alrActive(){return ALR.filter(a=>alrOn(a)&&alrHit(a,2));}
+function renderAlr(){
+  const el=document.getElementById('v-alr');if(!el) return;const ed=canGes(),act=alrActive(),on=ALR.filter(alrOn);
+  const cards=ALR.map(a=>{const o=alrOn(a),h=[0,1,2].map(i=>alrHit(a,i)),cur=h[2]&&o;return `<div class="al-c ${!o?'off':cur?'hit':'ok'}">
+   <div class="al-h"><span class="al-dot"></span><div><b>${a.t}</b><em>${a.d}</em></div>${ed?`<label class="sw-mini" title="Monitorar"><input type="checkbox" data-alon="${a.k}" ${o?'checked':''}><i></i></label>`:''}</div>
+   <div class="al-m">${[0,1,2].map(i=>`<div class="${o&&h[i]?'hit':''}"><span>${MES3[i]}</span><b>${alrFmt(a,a.fn(i))}</b></div>`).join('')}</div>
+   <div class="al-f"><span>Alerta quando ${a.op==='<'?'menor que':'maior que'} ${ed?`<input class="g-in sm" type="number" step="${a.u==='×'?'0.1':'1'}" data-allim="${a.k}" value="${alrLim(a)}">`:`<b>${fN(alrLim(a),a.u==='×'?1:0)}</b>`} ${a.u==='R$'?'reais':a.u}</span><button class="lnk" onclick="${a.v==='ctb'?"goSub('ctb','ctb-ind')":`show('${a.v}')`}">Ver análise ›</button></div></div>`;}).join('');
+  el.innerHTML=`<div class="ik-grid gk">${kpG('Alertas ativos em julho',act.length,'de '+on.length+' indicadores monitorados',act.length?'k-bad':'k-ok')}${kpG('Ocorrências no trimestre',ALR.filter(alrOn).reduce((s,a)=>s+[0,1,2].filter(i=>alrHit(a,i)).length,0),'alertas acesos somando os 3 meses')}${kpG('Indicadores dentro da faixa',on.length-act.length,'no último mês')}${kpG('Último mês analisado','Julho/26','balancete e vendas')}</div>
+   <div class="al-grid">${cards}</div>
+   <div class="note" style="margin-top:12px">${ed?'Ajuste os limites conforme a política da empresa; ficam salvos neste navegador. ':''}Os alertas ativos do último mês também aparecem na tela inicial.</div>`;
+}
+const _riAlr=renderIni; renderIni=function(){_riAlr();const v=document.getElementById('v-ini');if(!v||v.querySelector('.alr-ini')) return;const act=alrActive();const h=v.querySelector('.ini-hero');
+  const html=`<section class="ini-card alr-ini ${act.length?'hit':'ok'}"><div class="ai-h"><span class="al-dot"></span><div><b>${act.length?act.length+' alerta'+(act.length>1?'s':'')+' em julho/2026':'Nenhum alerta em julho/2026'}</b><em>${act.length?'Indicadores fora da faixa definida pela gestão':'Todos os indicadores monitorados estão dentro da faixa'}</em></div><button class="btn" onclick="show('alr')">Ver alertas</button></div>${act.length?`<div class="ai-l">${act.map(a=>`<button class="ai-chip" onclick="show('alr')">${esc(a.t)} · <b>${alrFmt(a,a.fn(2))}</b></button>`).join('')}</div>`:''}</section>`;
+  if(h) h.insertAdjacentHTML('afterend',html);else v.insertAdjacentHTML('afterbegin',html);};
+
+/* =============== 7. PLANO DE AÇÃO =============== */
+const AC_AREAS=['Financeiro','Contabilidade','Comercial','Produção','Gestão','Sócios'];
+const AC_ST=[['todo','A fazer'],['doing','Em andamento'],['done','Concluída']];
+const AC_PR=[['alta','Alta'],['media','Média'],['baixa','Baixa']];
+const ACAO_DEF=[
+ ['Conferir o saldo da conta Caixa (dinheiro em espécie) com a contabilidade e definir limite de dinheiro físico','Financeiro','alta','2026-11-15','end'],
+ ['Aplicar o caixa excedente em investimentos de liquidez diária atrelados ao CDI','Financeiro','alta','2026-11-30','end'],
+ ['Fazer inventário mensal do estoque e atualizar o saldo nos balancetes','Contabilidade','alta','2026-12-15','ciclo'],
+ ['Conciliar todo mês a receita dos relatórios de vendas com a receita contabilizada','Contabilidade','alta','2026-11-30','dfc'],
+ ['Revisar a tabela de preços pelo IPCA e pelo preço mínimo por m³ de cada grupo','Comercial','media','2026-12-20','pmin'],
+ ['Priorizar na venda os grupos com maior margem por m³ e rever os de margem negativa','Comercial','media','2027-01-31','grp'],
+ ['Aprovar o orçamento mensal de 2027 e fazer reunião mensal de resultados','Gestão','media','2027-01-15','orc'],
+ ['Acompanhar todo mês o ponto de equilíbrio e a margem de segurança no painel','Gestão','media','2026-11-30','fin'],
+ ['Medir o rendimento da tora (m³ serrado ÷ m³ de tora) por lote','Produção','media','2027-02-28','cus'],
+ ['Formalizar as funções da terceira geração no organograma e o plano de sucessão','Sócios','baixa','2027-03-31','emp'],
+];
+function acGet(){const a=jget('cvl-acao',null);return Array.isArray(a)?a:ACAO_DEF.map((x,i)=>({id:'a'+(i+1),a:x[0],ar:x[1],pr:x[2],p:x[3],v:x[4],r:'',s:'todo',o:''}));}
+function acSet(a){jset('cvl-acao',a);}
+const today=()=>{const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');};
+const late=x=>x.s!=='done'&&x.p&&x.p<today();
+const dBR=s=>s?s.split('-').reverse().join('/'):'sem prazo';
+function renderAcao(){
+  const el=document.getElementById('v-acao');if(!el) return;const ed=canGes(),A=acGet(),done=A.filter(x=>x.s==='done').length,doing=A.filter(x=>x.s==='doing').length,lt=A.filter(late).length;
+  const F=A.filter(x=>(G.acf==='all'||x.s===G.acf)&&(G.aca==='all'||x.ar===G.aca));
+  const card=x=>`<div class="ac-card pr-${x.pr} ${late(x)?'late':''}" data-acid="${x.id}" ${ed?'draggable="true"':''} tabindex="0">
+    <div class="ac-top"><span class="ac-ar">${esc(x.ar)}</span><span class="ac-pr">${AC_PR.find(p=>p[0]===x.pr)[1]}</span></div><p>${esc(x.a)}</p>
+    <div class="ac-meta"><span>${ic('user')}${esc(x.r||'a definir')}</span><span class="ac-dt">${late(x)?'Atrasada · ':''}${dBR(x.p)}</span></div>
+    ${ed?`<div class="ac-mv">${x.s!=='todo'?`<button data-acmv="${x.id}:-1" title="Voltar etapa">‹</button>`:''}${x.s!=='done'?`<button data-acmv="${x.id}:1" title="Avançar etapa">›</button>`:''}</div>`:''}</div>`;
+  const board=`<div class="ac-board">${AC_ST.map(([s,l])=>{const it=F.filter(x=>x.s===s);return `<div class="ac-col" data-acol="${s}"><div class="ac-ch"><b>${l}</b><span>${it.length}</span></div>${it.map(card).join('')||'<div class="ac-empty">Nenhuma ação</div>'}</div>`;}).join('')}</div>`;
+  const list=`<div class="panel"><div class="tw"><table><thead><tr><th>Ação</th><th>Área</th><th>Responsável</th><th>Prazo</th><th>Prioridade</th><th>Status</th></tr></thead><tbody>${F.map(x=>`<tr data-acid="${x.id}" class="${late(x)?'ac-late':''}"><td style="white-space:normal;min-width:280px">${esc(x.a)}</td><td>${esc(x.ar)}</td><td>${esc(x.r||'a definir')}</td><td>${late(x)?'<b class="neg">':''}${dBR(x.p)}${late(x)?'</b>':''}</td><td>${AC_PR.find(p=>p[0]===x.pr)[1]}</td><td><span class="ac-s ${x.s}">${AC_ST.find(s=>s[0]===x.s)[1]}</span></td></tr>`).join('')}</tbody></table></div></div>`;
+  el.innerHTML=`<div class="ik-grid gk">${kpG('Ações no plano',A.length,AC_AREAS.filter(a=>A.some(x=>x.ar===a)).length+' áreas envolvidas')}${kpG('Concluídas',fP(A.length?done/A.length:0).replace(',00',''),done+' de '+A.length,'k-ok')}${kpG('Em andamento',doing,'')}${kpG('Atrasadas',lt,'prazo vencido',lt?'k-bad':'')}</div>
+   <div class="ac-prog"><i style="width:${A.length?done/A.length*100:0}%"></i></div>
+   <div class="ac-bar">${segG('acf',G.acf,[['all','Todas'],...AC_ST])}<select class="g-sel" data-acarea="1"><option value="all">Todas as áreas</option>${AC_AREAS.map(a=>`<option ${G.aca===a?'selected':''}>${a}</option>`).join('')}</select><span style="flex:1"></span>${segG('acv',G.acv,[['board','Quadro'],['list','Lista']])}<button class="btn" data-accsv="1">${ic('dl')}Exportar</button>${ed?`<button class="btn primary" data-acnew="1">${ic('plus')}Nova ação</button>`:''}</div>
+   ${G.acv==='board'?board:list}
+   <div class="note" style="margin-top:12px">${ed?'Clique em uma ação para editar; arraste entre as colunas ou use as setas para mudar a etapa. ':'Somente leitura. '}As ações iniciais vêm das recomendações do estudo; o plano fica salvo neste navegador.</div>`;
+}
+function acForm(x){const ed=canGes(),isNew=!x;x=x||{id:'a'+Date.now(),a:'',ar:'Gestão',pr:'media',p:'',r:'',s:'todo',v:'',o:''};
+  if(!ed){openModal({kicker:'Plano de ação',title:x.a,src:'',body:`<div class="ac-view"><div><span>Área</span><b>${esc(x.ar)}</b></div><div><span>Responsável</span><b>${esc(x.r||'a definir')}</b></div><div><span>Prazo</span><b>${dBR(x.p)}</b></div><div><span>Prioridade</span><b>${AC_PR.find(p=>p[0]===x.pr)[1]}</b></div><div><span>Status</span><b>${AC_ST.find(s=>s[0]===x.s)[1]}</b></div>${x.v&&VIEWS[x.v]?`<div><span>Análise relacionada</span><b><button class="lnk" onclick="closeModal();show('${x.v}')">${esc(VIEWS[x.v].t)} ›</button></b></div>`:''}${x.o?`<p>${esc(x.o)}</p>`:''}</div>`});return;}
+  const opt=(a,c)=>a.map(([v,l])=>`<option value="${v}" ${v===c?'selected':''}>${l}</option>`).join('');
+  const vs=Object.keys(VIEWS).filter(v=>!VIEWS[v].acad&&v!=='acao'&&canView(v)).map(v=>[v,VIEWS[v].t]);
+  openModal({kicker:'Plano de ação',title:isNew?'Nova ação':'Editar ação',src:'',body:`<div class="cp ac-f" data-acform="${x.id}">
+   <label>Ação</label><textarea id="acA" rows="3">${esc(x.a)}</textarea>
+   <div class="ac-f2"><div><label>Área</label><select id="acAr">${opt(AC_AREAS.map(a=>[a,a]),x.ar)}</select></div><div><label>Responsável</label><input id="acR" value="${esc(x.r)}" placeholder="Nome"></div></div>
+   <div class="ac-f2"><div><label>Prazo</label><input id="acP" type="date" value="${esc(x.p)}"></div><div><label>Prioridade</label><select id="acPr">${opt(AC_PR,x.pr)}</select></div></div>
+   <div class="ac-f2"><div><label>Status</label><select id="acS">${opt(AC_ST,x.s)}</select></div><div><label>Análise relacionada</label><select id="acV"><option value="">—</option>${opt(vs,x.v)}</select></div></div>
+   <label>Observações</label><textarea id="acO" rows="2">${esc(x.o)}</textarea>
+   <div class="cp-msg" id="acM"></div>
+   <div class="pf-act"><button class="btn primary" data-acsave="${isNew?'new':x.id}">Salvar</button>${isNew?'':`<button class="btn" data-acdel="${x.id}">${ic('trash')}Excluir</button>`}</div></div>`});
+  document.getElementById('ov').classList.add('cp-on');
+}
+function acCsv(){const A=acGet(),q=s=>'"'+String(s||'').replace(/"/g,'""')+'"';const rows=[['Ação','Área','Responsável','Prazo','Prioridade','Status','Observações'],...A.map(x=>[x.a,x.ar,x.r,dBR(x.p),AC_PR.find(p=>p[0]===x.pr)[1],AC_ST.find(s=>s[0]===x.s)[1],x.o])];
+  dlFile('plano-de-acao.csv','﻿'+rows.map(r=>r.map(q).join(';')).join('\r\n'),'text/csv;charset=utf-8');}
+function dlFile(n,c,t){const b=new Blob([c],{type:t}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=n;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},500);}
+
+/* =============== 8. RELATÓRIO EXECUTIVO =============== */
+function renderRex(){
+  const el=document.getElementById('v-rex');if(!el) return;const p=P(3),d=dupCalc(3),cy=cicloCalc(3),f=fleur(3),A=acGet(),act=alrActive(),AT=BPV('Ativo total')[3],DI=BPV('Disponível')[3],CX=BPV('Caixa')[3],LL=BALD.lucro[3],m=orcMeta(3);
+  const k=(l,v,s)=>`<div class="rx-k"><span>${l}</span><b>${v}</b><em>${s}</em></div>`;
+  const F=i=>DATA.financeiro[i].vals;
+  const dre=[['Receita de vendas',0],['(−) Custos e despesas variáveis',1],['= Margem de contribuição',5],['(−) Custos e despesas fixos',2],['= Resultado gerencial',7]].map(([l,i])=>`<tr class="${i===7?'b':''}"><td>${l}</td>${[0,1,2,3].map(j=>`<td>${fM0((i===1||i===2?-1:1)*F(i)[j][0])}</td>`).join('')}</tr>`).join('');
+  const prox=A.filter(x=>x.s!=='done').sort((a,b)=>(a.p||'9').localeCompare(b.p||'9')).slice(0,5);
+  const done=A.filter(x=>x.s==='done').length;
+  const logo=MED.logo?`<img src="${MED.logo}" alt="Logo da empresa" class="rx-logo">`:`<div class="rx-mk">CVL</div>`;
+  const conc=[`Margem de contribuição de <b>${fP(p.MCp)}</b> e margem de segurança de <b>${fP(p.MS)}</b> no trimestre: as vendas estão bem acima do ponto de equilíbrio (R$ ${fM0(p.PEC)}).`,
+   `O lucro contábil do trimestre (<b>${rs0(LL)}</b>) é bem menor que o resultado gerencial (<b>${rs0(p.RES)}</b>): a receita contabilizada é menor que a dos relatórios de vendas e o Simples Nacional incide sobre ela. Conciliar as duas bases é prioridade.`,
+   `Sem empréstimos, com disponível de <b>${rs0(DI)}</b> (${fP(DI/AT)} do ativo), dos quais ${rs0(CX)} em espécie: liquidez muito alta, mas parte do recurso não rende.`,
+   `Ciclo financeiro de cerca de <b>${fN(cy.cf,0)} dias</b>, puxado pelo estoque, que não é atualizado mês a mês nos balancetes.`];
+  el.innerHTML=`<div class="rx-bar"><div><b>Relatório executivo do trimestre</b><span>Uma página A4 com os números de maio a julho de 2026. Use "Salvar em PDF" na janela de impressão.</span></div><button class="btn primary" data-rexp="1">${ic('print')}Gerar PDF</button></div>
+  <div class="rex-page">
+   <header class="rx-h">${logo}<div><h1>Relatório executivo</h1><p>Análise custo-volume-lucro · trimestre maio a julho de 2026</p></div><div class="rx-d">Emitido em ${new Date().toLocaleDateString('pt-BR')}</div></header>
+   <div class="rx-kg">${k('Receita de vendas',rs0(p.R),'relatórios de vendas')}${k('Margem de contribuição',fP(p.MCp),rs0(p.MC))}${k('Resultado gerencial',rs0(p.RES),fP(p.RES/m.RES)+' da meta')}${k('Lucro líquido contábil',rs0(LL),'balancetes')}${k('Ponto de equilíbrio',rs0(p.PEC),'contábil')}${k('Margem de segurança',fP(p.MS),'acima do equilíbrio')}${k('Liquidez corrente',fN(BPV('Ativo circulante')[3]/BPV('Passivo circulante')[3],2),'31/07/2026')}${k('Ciclo financeiro',fN(cy.cf,0)+' dias','NCG '+rs0(f.NCG))}</div>
+   <div class="rx-2">
+    <section><h2>Resultado gerencial (R$)</h2><table class="rx-t"><thead><tr><th></th><th>Mai</th><th>Jun</th><th>Jul</th><th>Tri</th></tr></thead><tbody>${dre}</tbody></table>
+     <h2>Retorno (Dupont, trimestre)</h2><p class="rx-p">ROE ${fP(d.roe)} = margem líquida ${fP(d.ml)} × giro ${fN(d.ga,3)} × multiplicador ${fN(d.mf,3)}.</p></section>
+    <section><h2>Alertas de julho</h2>${act.length?`<ul class="rx-ul al">${act.map(a=>`<li>${esc(a.t)}: <b>${alrFmt(a,a.fn(2))}</b></li>`).join('')}</ul>`:'<p class="rx-p">Nenhum indicador fora da faixa.</p>'}
+     <h2>Plano de ação · ${done} de ${A.length} concluídas</h2><ul class="rx-ul">${prox.map(x=>`<li>${esc(x.a)} <em>${esc(x.ar)} · ${dBR(x.p)}</em></li>`).join('')}</ul></section>
+   </div>
+   <section><h2>Conclusões</h2><ul class="rx-ul">${conc.map(c=>`<li>${c}</li>`).join('')}</ul></section>
+   <footer class="rx-f"><span>Painel CVL · valores gerenciais e contábeis da empresa estudada</span><span>Powered by LuizCorti</span></footer>
+  </div>`;
+}
+function printRex(){const pg=document.querySelector('#v-rex .rex-page');if(!pg) return;let h=document.getElementById('rexp');if(!h){h=document.createElement('div');h.id='rexp';document.body.appendChild(h);}h.innerHTML=pg.outerHTML;document.body.classList.add('rex-on');setTimeout(()=>window.print(),60);}
+window.addEventListener('afterprint',()=>document.body.classList.remove('rex-on'));
+
+/* =============== 9. HISTÓRIA DA EMPRESA (fotos) =============== */
+const MED={logo:null,fotos:[],ok:false};
+const MDB={p:null,open(){return this.p||(this.p=new Promise((res,rej)=>{try{const r=indexedDB.open('cvl-media',1);r.onupgradeneeded=()=>r.result.createObjectStore('kv');r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error);}catch(e){rej(e);}}));},
+ async get(k){try{const d=await this.open();return await new Promise(res=>{const t=d.transaction('kv').objectStore('kv').get(k);t.onsuccess=()=>res(t.result);t.onerror=()=>res(undefined);});}catch(e){const v=lsGet('cvl-med:'+k,null);return v?JSON.parse(v):undefined;}},
+ async set(k,v){try{const d=await this.open();await new Promise((res,rej)=>{const tx=d.transaction('kv','readwrite');tx.objectStore('kv').put(v,k);tx.oncomplete=res;tx.onerror=()=>rej(tx.error);});return true;}catch(e){try{localStorage.setItem('cvl-med:'+k,JSON.stringify(v));return true;}catch(x){return false;}}}};
+async function medLoad(){MED.logo=(await MDB.get('logo'))||null;MED.fotos=(await MDB.get('fotos'))||[];MED.ok=true;if(ST.view==='emp'&&typeof renderEmp==='function') renderEmp();if(ST.view==='rex') renderRex();}
+async function medSave(){const a=await MDB.set('logo',MED.logo),b=await MDB.set('fotos',MED.fotos);if(!(a&&b)&&typeof toast==='function') toast('Sem espaço para salvar as imagens neste navegador');return a&&b;}
+function imgData(file,max,type,q){return new Promise((res,rej)=>{const fr=new FileReader();fr.onload=()=>{const im=new Image();im.onload=()=>{let w=im.naturalWidth||im.width,h=im.naturalHeight||im.height;const s=Math.min(1,max/Math.max(w,h));w=Math.max(1,Math.round(w*s));h=Math.max(1,Math.round(h*s));const c=document.createElement('canvas');c.width=w;c.height=h;const x=c.getContext('2d');if(type==='image/jpeg'){x.fillStyle='#fff';x.fillRect(0,0,w,h);}x.drawImage(im,0,0,w,h);res(c.toDataURL(type,q));};im.onerror=()=>rej(new Error('img'));im.src=fr.result;};fr.onerror=rej;fr.readAsDataURL(file);});}
+const HIST_DEF={txt:'Empresa familiar do setor madeireiro do Extremo Oeste de Santa Catarina, dedicada ao beneficiamento e à venda de madeira de pinheiro, pinus e eucalipto.\n\nFundada pela primeira geração da família, a empresa cresceu com base na experiência prática dos sócios e na relação próxima com clientes e fornecedores da região. Hoje passa pela transição da segunda para a terceira geração, momento em que busca profissionalizar a gestão com controles gerenciais e indicadores, como os apresentados neste painel.\n\nUse o botão "Editar história" para contar a trajetória da empresa: fundação, principais investimentos, produtos e pessoas que marcaram cada fase.',
+ tl:[['—','Fundação da empresa pela primeira geração da família.'],['—','A segunda geração assume a gestão.'],['2026','Início da transição para a terceira geração e estruturação dos controles gerenciais (análise CVL deste estudo).']]};
+function histGet(){return jget('cvl-hist',null)||clone(HIST_DEF);}
+function histHtml(){const h=histGet(),ed=canGes(),F=MED.fotos;
+  const logo=MED.logo?`<img src="${MED.logo}" alt="Logo da empresa">`:`<div class="hl-ph">${ic('img')}<span>Logo</span></div>`;
+  return `<div id="emp-hist" class="hist">
+   <section class="ini-card hist-main"><div class="hist-head"><div class="hist-logo">${logo}</div><div class="hist-ht"><h3>Nossa história</h3><p>Trajetória e principais marcos</p></div>
+    ${ed?`<div class="hist-act"><label class="btn">${ic('img')}${MED.logo?'Trocar logo':'Adicionar logo'}<input type="file" accept="image/*" hidden data-uplogo="1"></label>${MED.logo?`<button class="btn" data-dellogo="1" title="Remover logo">${ic('trash')}</button>`:''}<button class="btn primary" data-histed="1">${ic('edit')}Editar história</button></div>`:''}</div>
+    <div class="hist-body"><div class="hist-txt">${h.txt.split(/\n\s*\n/).map(p=>`<p>${esc(p)}</p>`).join('')}</div>
+    <div class="hist-tl"><h4>Linha do tempo</h4><ol class="tl">${h.tl.map(([a,t])=>`<li><span>${esc(a)}</span><p>${esc(t)}</p></li>`).join('')}</ol></div></div></section>
+   <section class="ini-card"><div class="gal-h"><div><h3>${ic('emp')}Estrutura física em fotos</h3><p>${F.length?F.length+' foto'+(F.length>1?'s':''):'Nenhuma foto adicionada'}</p></div>${ed?`<label class="btn primary">${ic('plus')}Adicionar fotos<input type="file" accept="image/*" multiple hidden data-upfotos="1"></label>`:''}</div>
+    ${F.length?`<div class="gal">${F.map((f,i)=>`<figure class="gal-i"><button class="gal-img" data-galopen="${i}" aria-label="Ampliar foto"><img src="${f.src}" alt="${esc(f.cap||'Foto da estrutura física')}" loading="lazy"></button><figcaption ${ed?`contenteditable="true" data-galcap="${i}" spellcheck="true"`:''}>${esc(f.cap||(ed?'Adicionar legenda':''))}</figcaption>${ed?`<button class="gal-del" data-galdel="${i}" title="Remover foto">${ic('trash')}</button>`:''}</figure>`).join('')}</div>`:`<div class="gal-empty">${ic('img')}<b>Fotos do pátio, da serraria, do tratamento e da frota</b><span>${ed?'Clique em "Adicionar fotos" para enviar as imagens.':'A gestão ainda não adicionou fotos.'}</span></div>`}
+    <div class="note">Imagens reduzidas e salvas neste navegador. Para levar as fotos a outro computador, use Preferências › Backup dos dados.</div></section></div>`;}
+function histForm(){const h=histGet();openModal({kicker:'Estrutura da empresa',title:'Editar história',src:'',body:`<div class="cp"><label for="hTxt">Texto (deixe uma linha em branco entre os parágrafos)</label><textarea id="hTxt" rows="10">${esc(h.txt)}</textarea>
+  <label for="hTl">Linha do tempo (uma linha por marco: ano | descrição)</label><textarea id="hTl" rows="6">${esc(h.tl.map(x=>x[0]+' | '+x[1]).join('\n'))}</textarea>
+  <div class="pf-act"><button class="btn primary" data-histsave="1">Salvar</button><button class="btn" data-histreset="1">Restaurar texto inicial</button></div></div>`});document.getElementById('ov').classList.add('cp-on');}
+let GALI=0;
+function galOpen(i){GALI=i;let o=document.getElementById('gbox');if(!o){o=document.createElement('div');o.id='gbox';o.className='gbox';document.body.appendChild(o);o.addEventListener('click',e=>{if(e.target===o||e.target.closest('[data-gbx]')) o.classList.remove('on');const n=e.target.closest('[data-gbn]');if(n) galOpen((GALI+(+n.dataset.gbn)+MED.fotos.length)%MED.fotos.length);});}
+  const f=MED.fotos[i];o.innerHTML=`<figure><img src="${f.src}" alt="${esc(f.cap||'Foto')}"><figcaption>${esc(f.cap||'')} <span>${i+1} de ${MED.fotos.length}</span></figcaption></figure>${MED.fotos.length>1?'<button class="gb-n p" data-gbn="-1" aria-label="Anterior">‹</button><button class="gb-n n" data-gbn="1" aria-label="Próxima">›</button>':''}<button class="gb-x" data-gbx="1" aria-label="Fechar">×</button>`;o.classList.add('on');}
+document.addEventListener('keydown',e=>{const o=document.getElementById('gbox');if(!o||!o.classList.contains('on')) return;if(e.key==='Escape') o.classList.remove('on');if(e.key==='ArrowRight') galOpen((GALI+1)%MED.fotos.length);if(e.key==='ArrowLeft') galOpen((GALI-1+MED.fotos.length)%MED.fotos.length);});
+const _reHist=renderEmp; renderEmp=function(){_reHist();const el=document.getElementById('v-emp');if(el&&!document.getElementById('emp-hist')) el.insertAdjacentHTML('afterbegin',histHtml());};
+
+/* =============== BACKUP DOS DADOS =============== */
+async function exportData(){const ks={};for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(/^cvl-/.test(k)&&!/^cvl-(pw:|rem-cred|fails|lock)/.test(k)) ks[k]=localStorage.getItem(k);}
+  dlFile('painel-cvl-backup.json',JSON.stringify({v:1,em:new Date().toISOString(),ls:ks,med:{logo:MED.logo,fotos:MED.fotos}}),'application/json');if(typeof toast==='function') toast('Backup gerado','ok');}
+function importData(file){const fr=new FileReader();fr.onload=async()=>{try{const j=JSON.parse(fr.result);if(!j||!j.ls) throw 0;Object.entries(j.ls).forEach(([k,v])=>{if(/^cvl-/.test(k)&&!/^cvl-(pw:|rem-cred)/.test(k)) lsSet(k,v);});if(j.med){MED.logo=j.med.logo||null;MED.fotos=j.med.fotos||[];await medSave();}PJ=jget('cvl-proj',null)||clone(PJD);G.pmm=+lsGet('cvl-pmm','15');if(typeof toast==='function') toast('Dados importados','ok');show(ST.view);}catch(e){if(typeof toast==='function') toast('Arquivo de backup inválido');}};fr.readAsText(file);}
+const _rpBk=renderPrefs; renderPrefs=function(){_rpBk();const b=document.getElementById('prefsBody');if(!b) return;b.insertAdjacentHTML('beforeend',`<div class="pref"><div class="pl">Backup dos dados</div><div style="display:grid;gap:8px"><button class="btn" onclick="exportData()">${ic('dl')}Exportar metas, plano de ação, história e fotos</button>${canGes()?`<label class="btn">${ic('plus')}Importar backup<input type="file" accept="application/json,.json" hidden onchange="this.files[0]&&importData(this.files[0])"></label>`:''}</div><div class="desc">Esses dados ficam salvos só neste navegador. Exporte para guardar uma cópia ou levar para outro computador.</div></div>`);};
+
+/* =============== RENDER E EVENTOS =============== */
+const GR={orc:renderOrc,proj:renderProj,ciclo:renderCiclo,pmin:renderPmin,acao:renderAcao,alr:renderAlr,rex:renderRex};
+const _shG=show; show=function(v){_shG(v);if(GR[ST.view]) GR[ST.view]();};
+function rerG(){if(GR[ST.view]) GR[ST.view]();else if(ST.view==='ctb') renderCtb();else if(ST.view==='emp') renderEmp();else if(ST.view==='ini') renderIni();if(typeof applySub==='function') applySub();}
+document.addEventListener('click',async e=>{const t=e.target;
+  const gs=t.closest('[data-gs]');if(gs){const [n,v]=gs.dataset.gs.split(':');G[n]=isNaN(+v)||n==='pj'?v:+v;if(n==='dup'){renderCtb();applySub();}else rerG();return;}
+  const fx=(sel,fn)=>{const r=t.closest(sel);if(r&&!t.closest('input,button:not(.trbtn),a')){fn(r);return true;}return false;};
+  if(fx('[data-orcr]',r=>traceOrc(+r.dataset.orcr))) return;
+  if(fx('[data-pjr]',r=>traceProj(+r.dataset.pjr))) return;
+  if(fx('[data-cyr]',r=>traceCiclo(+r.dataset.cyr))) return;
+  if(fx('[data-fl]',r=>traceFleur(+r.dataset.fl))) return;
+  if(fx('[data-pmr]',r=>tracePmin(+r.dataset.pmr))) return;
+  if(fx('[data-dup]',r=>traceDup(+r.dataset.dup))) return;
+  if(t.closest('[data-orcreset]')){localStorage.removeItem('cvl-orc');rerG();toast&&toast('Metas redefinidas pela média do trimestre','ok');return;}
+  if(t.closest('[data-pjreset]')){PJ[G.pj]=clone(PJD[G.pj]);jset('cvl-proj',PJ);rerG();return;}
+  if(t.closest('[data-rexp]')){printRex();return;}
+  if(t.closest('[data-accsv]')){acCsv();return;}
+  if(t.closest('[data-acnew]')){acForm(null);return;}
+  const mv=t.closest('[data-acmv]');if(mv){e.stopPropagation();const [id,d]=mv.dataset.acmv.split(':'),A=acGet(),x=A.find(a=>a.id===id),o=AC_ST.map(s=>s[0]);x.s=o[Math.max(0,Math.min(2,o.indexOf(x.s)+(+d)))];acSet(A);rerG();return;}
+  const sv=t.closest('[data-acsave]');if(sv){const A=acGet(),M=document.getElementById('acM'),a=document.getElementById('acA').value.trim();if(!a){M.className='cp-msg err';M.textContent='Descreva a ação.';return;}
+    const id=sv.dataset.acsave==='new'?'a'+Date.now():sv.dataset.acsave;let x=A.find(q=>q.id===id);if(!x){x={id};A.push(x);}Object.assign(x,{a,ar:document.getElementById('acAr').value,r:document.getElementById('acR').value.trim(),p:document.getElementById('acP').value,pr:document.getElementById('acPr').value,s:document.getElementById('acS').value,v:document.getElementById('acV').value,o:document.getElementById('acO').value.trim()});acSet(A);closeModal();rerG();toast&&toast('Ação salva','ok');return;}
+  const dl=t.closest('[data-acdel]');if(dl){acSet(acGet().filter(q=>q.id!==dl.dataset.acdel));closeModal();rerG();toast&&toast('Ação excluída','ok');return;}
+  const ac=t.closest('[data-acid]');if(ac&&!t.closest('button')){const x=acGet().find(q=>q.id===ac.dataset.acid);if(x) acForm(x);return;}
+  if(t.closest('[data-histed]')){histForm();return;}
+  if(t.closest('[data-histsave]')){const tl=document.getElementById('hTl').value.split('\n').map(l=>l.trim()).filter(Boolean).map(l=>{const i=l.indexOf('|');return i<0?['—',l]:[l.slice(0,i).trim()||'—',l.slice(i+1).trim()];});jset('cvl-hist',{txt:document.getElementById('hTxt').value.trim()||HIST_DEF.txt,tl});closeModal();renderEmp();applySub();toast&&toast('História salva','ok');return;}
+  if(t.closest('[data-histreset]')){localStorage.removeItem('cvl-hist');closeModal();renderEmp();applySub();return;}
+  if(t.closest('[data-dellogo]')){MED.logo=null;await medSave();renderEmp();applySub();return;}
+  const gd=t.closest('[data-galdel]');if(gd){MED.fotos.splice(+gd.dataset.galdel,1);await medSave();renderEmp();applySub();return;}
+  const go=t.closest('[data-galopen]');if(go){galOpen(+go.dataset.galopen);return;}
+});
+document.addEventListener('change',async e=>{const t=e.target;
+  if(t.dataset.orcin){const [a,i]=t.dataset.orcin.split(':'),o=orcGet();let v=+t.value;if(!isFinite(v)) return;if(a==='imc') v=v/100;o[a][+i]=v;jset('cvl-orc',o);rerG();return;}
+  if(t.dataset.pjin){const v=+t.value;if(!isFinite(v)) return;PJ[G.pj][t.dataset.pjin]=v;jset('cvl-proj',PJ);rerG();return;}
+  if(t.dataset.allim){const c=alrCfg(),v=+t.value;if(!isFinite(v)) return;c[t.dataset.allim]={...(c[t.dataset.allim]||{}),lim:v};jset('cvl-alr',c);rerG();return;}
+  if(t.dataset.alon){const c=alrCfg();c[t.dataset.alon]={...(c[t.dataset.alon]||{}),off:!t.checked};jset('cvl-alr',c);rerG();return;}
+  if(t.dataset.acarea){G.aca=t.value;rerG();return;}
+  if(t.dataset.uplogo&&t.files[0]){try{MED.logo=await imgData(t.files[0],480,'image/png');await medSave();renderEmp();applySub();toast&&toast('Logo atualizado','ok');}catch(x){toast&&toast('Não foi possível ler a imagem');}return;}
+  if(t.dataset.upfotos&&t.files.length){const fs=[...t.files].slice(0,Math.max(0,30-MED.fotos.length));if(fs.length<t.files.length) toast&&toast('Limite de 30 fotos');let n=0;for(const f of fs){try{MED.fotos.push({src:await imgData(f,1600,'image/jpeg',0.82),cap:f.name.replace(/\.[^.]+$/,'').replace(/[_-]+/g,' ')});n++;}catch(x){}}await medSave();renderEmp();applySub();toast&&toast(n+' foto'+(n>1?'s':'')+' adicionada'+(n>1?'s':''),'ok');return;}
+});
+document.addEventListener('input',e=>{const t=e.target;
+  if(t.dataset.pmm){G.pmm=+t.value;lsSet('cvl-pmm',String(G.pmm));renderPmin();const r=document.querySelector('[data-pmm]');if(r) r.focus();return;}
+  if(t.dataset.pmv){G.pmv=+t.value;renderPmin();const r=document.querySelector('[data-pmv]');if(r) r.focus();return;}});
+document.addEventListener('focusout',async e=>{const c=e.target.closest&&e.target.closest('[data-galcap]');if(!c) return;const i=+c.dataset.galcap,v=c.textContent.trim();if(v==='Adicionar legenda'||!MED.fotos[i]||MED.fotos[i].cap===v) return;MED.fotos[i].cap=v;await medSave();});
+document.addEventListener('keydown',e=>{const c=e.target.closest&&e.target.closest('[data-galcap]');if(c&&e.key==='Enter'){e.preventDefault();c.blur();}
+  const a=e.target.closest&&e.target.closest('.ac-card');if(a&&(e.key==='Enter'||e.key===' ')&&e.target===a){e.preventDefault();const x=acGet().find(q=>q.id===a.dataset.acid);if(x) acForm(x);}});
+document.addEventListener('focusin',e=>{const c=e.target.closest&&e.target.closest('[data-galcap]');if(c&&c.textContent.trim()==='Adicionar legenda') c.textContent='';});
+/* arrastar ações entre colunas */
+let ACDRAG=null;
+document.addEventListener('dragstart',e=>{const c=e.target.closest&&e.target.closest('.ac-card[draggable]');if(!c) return;ACDRAG=c.dataset.acid;c.classList.add('drag');e.dataTransfer.effectAllowed='move';try{e.dataTransfer.setData('text/plain',ACDRAG)}catch(x){}});
+document.addEventListener('dragend',()=>{ACDRAG=null;document.querySelectorAll('.ac-col.over,.ac-card.drag').forEach(x=>x.classList.remove('over','drag'));});
+document.addEventListener('dragover',e=>{const col=e.target.closest&&e.target.closest('.ac-col');if(!col||!ACDRAG) return;e.preventDefault();document.querySelectorAll('.ac-col.over').forEach(x=>x!==col&&x.classList.remove('over'));col.classList.add('over');});
+document.addEventListener('drop',e=>{const col=e.target.closest&&e.target.closest('.ac-col');if(!col||!ACDRAG) return;e.preventDefault();const A=acGet(),x=A.find(q=>q.id===ACDRAG);if(x){x.s=col.dataset.acol;acSet(A);}ACDRAG=null;rerG();});
+medLoad();
+
 /* ================= TELAS SEPARADAS POR RAMIFICAÇÃO ================= */
 const SUBD={
+ 'emp-hist':'Trajetória da empresa, marcos, logo e fotos da estrutura física.',
+ 'ctb-dup':'Retorno sobre o patrimônio líquido decomposto em margem, giro do ativo e alavancagem.',
  'emp-perfil':'Identificação, porte, regime tributário e números gerais da empresa.',
  'emp-org':'Como a gestão e as áreas da empresa estão organizadas.',
  'emp-proc':'Etapas do processamento da madeira, da tora ao produto vendido.',
