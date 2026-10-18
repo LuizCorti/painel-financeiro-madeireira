@@ -1297,6 +1297,45 @@ body.deck-full #bnav,.login:not(.hide)~#bnav{display:none!important}
 .ipp{fill:var(--brand)}.ipn{fill:var(--pos)}.ipv{font-size:11px;font-weight:700;fill:var(--ink-2)}.ipl{font-size:11px;fill:var(--ink-3)}
 .sl-l{stroke:var(--brand);stroke-width:2.5}.sl-d{fill:var(--surface);stroke:var(--brand);stroke-width:2.5}
 .ctb-tabs{margin-bottom:16px}
+
+/* esqueci a senha, alterar senha, powered by */
+.lc-row{display:flex;justify-content:space-between;align-items:baseline}
+.lc-forgot{border:0;background:none;color:#4F46E5;font:600 13.5px var(--font);cursor:pointer;padding:0}
+.lc-forgot:hover{text-decoration:underline}
+.login-main{flex-direction:column}
+.login-by{margin-top:28px;font-size:12px;color:#9CA3AF;text-align:center;letter-spacing:.02em}
+.pw-by b{color:var(--brand);font-weight:700}.login-by b{color:#4F46E5}
+.fg{position:fixed;inset:0;z-index:1300;background:rgba(17,24,39,.45);display:none;align-items:center;justify-content:center;padding:20px}
+.fg.on{display:flex;animation:fadeIn .15s both}
+.fg-c{width:min(440px,100%);background:#fff;border-radius:18px;padding:28px;box-shadow:0 30px 70px -20px rgba(30,27,75,.45);color:#111827}
+.fg-c h3{font-size:21px;font-weight:800;letter-spacing:-.02em;margin:0 0 6px}
+.fg-c p{font-size:14px;color:#6B7280;line-height:1.55;margin:0 0 16px}
+.fg-c input{width:100%;height:48px;border-radius:12px;border:1px solid #DDE3F0;background:#EEF2FA;padding:0 14px;font:500 15px var(--font);color:#111827;margin-bottom:12px}
+.fg-c input:focus{outline:none;border-color:#4F46E5;background:#fff;box-shadow:0 0 0 4px rgba(79,70,229,.12)}
+.fg-a{display:flex;gap:10px;justify-content:flex-end;margin-top:6px;flex-wrap:wrap}
+.fg-b{height:42px;padding:0 18px;border-radius:10px;border:1px solid #DDE3F0;background:#fff;font:600 14px var(--font);color:#374151;cursor:pointer}
+.fg-b.pri{background:#4F46E5;border-color:#4F46E5;color:#fff}.fg-b.pri:hover{background:#4338CA}
+.fg-msg{font-size:13.5px;border-radius:10px;padding:12px 14px;margin:0 0 14px;background:#EEF0FF;color:#3730A3;line-height:1.5}
+.fg-msg.ok{background:#F0FDF4;color:#15803D}.fg-msg.err{background:#FEF2F2;color:#B91C1C}
+.cp{display:grid;gap:12px;max-width:440px}
+.cp label{font-size:12.5px;font-weight:700;color:var(--ink-2)}
+.cp input{height:46px;border-radius:10px;border:1px solid var(--line);background:var(--input);color:var(--ink);padding:0 14px;font:500 14.5px var(--font);width:100%}
+.cp input:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px var(--accent-l)}
+.cp-str{height:6px;border-radius:3px;background:var(--surface-3);overflow:hidden}.cp-str i{display:block;height:100%;width:0;transition:width .2s,background .2s}
+.cp-hint{font-size:12px;color:var(--ink-3)}
+.cp-msg{font-size:13px;min-height:18px;text-align:left}
+#ov.cp-on .modal{max-width:520px}
+.cp .pf-act{display:flex;gap:10px;flex-wrap:wrap}.cp-msg.err{color:var(--neg)}.cp-msg.ok{color:var(--pos)}
+
+/* telas por ramificação */
+.sub-hide{display:none!important}
+.sub-pager{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;margin:22px 0 4px}
+.sp-n{font-size:12.5px;color:var(--ink-3);font-weight:600;text-align:center}
+.sp-b{display:flex;flex-direction:column;gap:2px;align-items:flex-start;border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:10px 16px;cursor:pointer;color:var(--ink);font:inherit;max-width:300px;justify-self:start;transition:border-color .15s,box-shadow .15s}
+.sp-b.nx{align-items:flex-end;justify-self:end;text-align:right}
+.sp-b span{font-size:11.5px;color:var(--ink-3);font-weight:600;letter-spacing:.02em}.sp-b b{font-size:14px;color:var(--brand)}
+.sp-b:hover{border-color:var(--brand);box-shadow:0 4px 14px -6px rgba(79,70,229,.35)}
+@media(max-width:640px){.sub-pager{grid-template-columns:1fr 1fr}.sp-n{display:none}.sp-b{max-width:none;width:100%}}
 </style>
 </head>
 <body>
@@ -1319,7 +1358,7 @@ body.deck-full #bnav,.login:not(.hide)~#bnav{display:none!important}
       <p class="lc-s">Entre com suas credenciais para acessar o painel</p>
       <label class="lc-l" for="user">Usuário</label>
       <div class="field"><svg class="fi" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><input id="user" name="username" placeholder="Digite seu usuário" autocomplete="username" autocapitalize="none" spellcheck="false" required></div>
-      <label class="lc-l" for="pass">Senha</label>
+      <div class="lc-row"><label class="lc-l" for="pass">Senha</label><button type="button" class="lc-forgot" onclick="openForgot()">Esqueceu a senha?</button></div>
       <div class="field"><svg class="fi" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><input id="pass" name="password" type="password" placeholder="Digite sua senha" autocomplete="current-password" required><button type="button" class="pw-eye" id="pwEye" aria-label="Mostrar senha" onclick="const p=document.getElementById('pass'),s=p.type==='password';p.type=s?'text':'password';this.setAttribute('aria-label',s?'Ocultar senha':'Mostrar senha');this.innerHTML=s?'<svg viewBox=&quot;0 0 24 24&quot;><path d=&quot;M3 3l18 18M10.6 10.6a2 2 0 0 0 2.8 2.8M9.9 5.1A10.5 10.5 0 0 1 12 5c6 0 10 7 10 7a17 17 0 0 1-3.2 4M6.1 6.1C3.5 7.9 2 12 2 12s4 7 10 7a9.9 9.9 0 0 0 4.3-1&quot;/></svg>':'<svg viewBox=&quot;0 0 24 24&quot;><path d=&quot;M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z&quot;/><circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;3&quot;/></svg>'"><svg viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></button></div>
       <div class="caps" id="capsW" role="status">⇪ Caps Lock está ativado</div>
       <div class="hp" aria-hidden="true"><label for="hpWeb">Site</label><input id="hpWeb" name="website" tabindex="-1" autocomplete="off"></div>
@@ -1328,6 +1367,7 @@ body.deck-full #bnav,.login:not(.hide)~#bnav{display:none!important}
       <button class="btn-primary" type="submit">Entrar <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
       <div id="err" class="err" role="alert" aria-live="polite"></div>
     </form>
+    <div class="pw-by login-by">Powered by <b>LuizCorti</b></div>
   </div>
 </section>
 
@@ -1387,7 +1427,7 @@ body.deck-full #bnav,.login:not(.hide)~#bnav{display:none!important}
       <div id="v-tema" class="hide"></div>
       <div id="v-met" class="hide"></div>
       <div id="v-rel" class="hide"></div>
-      <div class="footer">Cálculos e Painel Financeiro · dados de <span id="srcFile2"></span> · valores gerenciais</div>
+      <div class="footer">Cálculos e Painel Financeiro · dados de <span id="srcFile2"></span> · valores gerenciais<span class="pw-by"> · Powered by <b>LuizCorti</b></span></div>
     </div>
   </div>
   <button class="btn primary present-exit" onclick="setPref('present','off')">Sair do modo apresentação</button>
@@ -2983,6 +3023,19 @@ const USERS={
  visitante:{p:'visitante2026',n:'Visitante',i:'VI',r:'visitante'},
  gestao:{p:'gestao2026',n:'Gestores da empresa',i:'GE',r:'gestor'},
 };
+
+/* senha: hash SHA-256 (troca de senha fica salva neste navegador) */
+function sha256(s){const K=[],H=[];let p=2;const isP=n=>{for(let f=2;f*f<=n;f++) if(n%f===0) return false;return true};const fr=x=>((x-Math.floor(x))*4294967296)|0;
+ for(let c=0;c<64;p++){if(isP(p)){if(c<8) H[c]=fr(Math.pow(p,1/2));K[c++]=fr(Math.pow(p,1/3));}}
+ const b=unescape(encodeURIComponent(s)),l=b.length*8,w=[];for(let i=0;i<b.length;i++) w[i>>2]|=b.charCodeAt(i)<<((3-i%4)*8);w[l>>5]|=0x80<<(24-l%32);w[((l+64>>9)<<4)+15]=l;
+ const r=(v,n)=>(v>>>n)|(v<<(32-n));let h=H.slice();
+ for(let j=0;j<w.length;j+=16){const W=Array.from({length:16},(_,k)=>w[j+k]|0);let [a,bb,c,d,e,f,g,hh]=h;
+  for(let i=0;i<64;i++){if(i>=16){const x=W[i-15],y=W[i-2];W[i]=(W[i-16]+(r(x,7)^r(x,18)^(x>>>3))+W[i-7]+(r(y,17)^r(y,19)^(y>>>10)))|0;}
+   const t1=(hh+(r(e,6)^r(e,11)^r(e,25))+((e&f)^(~e&g))+K[i]+W[i])|0,t2=((r(a,2)^r(a,13)^r(a,22))+((a&bb)^(a&c)^(bb&c)))|0;hh=g;g=f;f=e;e=(d+t1)|0;d=c;c=bb;bb=a;a=(t1+t2)|0;}
+  h=[a,bb,c,d,e,f,g,hh].map((v,i)=>(v+h[i])|0);}
+ return h.map(v=>('00000000'+(v>>>0).toString(16)).slice(-8)).join('');}
+function pwOverride(u){return lsGet('cvl-pw:'+u,null);}
+function checkPw(u,p){const U=USERS[u];if(!U) return false;const o=pwOverride(u);return o?o===sha256('cvl|'+u+'|'+p):U.p===p;}
 let CUR=null;
 const roleOf=()=>CUR?ROLES[CUR.r]:ROLES.autor;
 const canView=v=>{const r=roleOf();return !r.views||r.views.includes(v);};
@@ -2990,7 +3043,7 @@ doLogin=function(e){
   e.preventDefault();
   const u=document.getElementById('user').value.trim().toLowerCase(),p=document.getElementById('pass').value;
   const U=USERS[u];
-  if(!U||U.p!==p){document.getElementById('err').textContent='Usuário ou senha incorretos.';const c=document.getElementById('loginCard');if(c){c.classList.remove('shake');void c.offsetWidth;c.classList.add('shake');}document.getElementById('pass').select();return;}
+  if(!U||!checkPw(u,p)){document.getElementById('err').textContent='Usuário ou senha incorretos.';const c=document.getElementById('loginCard');if(c){c.classList.remove('shake');void c.offsetWidth;c.classList.add('shake');}document.getElementById('pass').select();return;}
   document.getElementById('err').textContent='';
   CUR={...U,u};
   PREF.banca=ROLES[U.r].banca?'on':'off';
@@ -3152,7 +3205,7 @@ document.addEventListener('click',e=>{
 document.addEventListener('keyup',e=>{if(e.target&&e.target.id==='pass'){const w=document.getElementById('capsW');if(w) w.classList.toggle('on',!!(e.getModifierState&&e.getModifierState('CapsLock')));}});
 const _loginUX=doLogin; doLogin=function(e){
   e.preventDefault();const u=document.getElementById('user').value.trim().toLowerCase(),p=document.getElementById('pass').value,U=USERS[u],b=document.querySelector('#loginCard .btn-primary');
-  if(!U||U.p!==p||RM()){_loginUX(e);return;}
+  if(!U||!checkPw(u,p)||RM()){_loginUX(e);return;}
   b.classList.add('loading');b.disabled=true;setTimeout(()=>{b.classList.remove('loading');b.disabled=false;_loginUX(e);toast('Bem-vindo(a), '+U.n.split(' ')[0].replace(/^Profa\.$/,'Profa. '+U.n.split(' ')[1]),'ok');},420);
 };
 
@@ -3434,7 +3487,7 @@ const _loginLK=doLogin; doLogin=function(e){
   if(!HV.ok){const h=document.getElementById('hv');h.classList.add('bad');err.textContent='Confirme a verificação de segurança antes de entrar.';return;}
   if(Date.now()-HV.at>5*60*1000){hvReset('Verificação expirada. Confirme novamente.');err.textContent='A verificação expirou.';return;}
   const u=document.getElementById('user').value.trim().toLowerCase(),p=document.getElementById('pass').value,U=USERS[u];
-  if(!U||U.p!==p){
+  if(!U||!checkPw(u,p)){
     LK.fails++;lsSet('cvl-fails',String(LK.fails));
     if(LK.fails>=5){LK.until=Date.now()+30000*Math.pow(2,Math.floor(LK.fails/5)-1);lsSet('cvl-lock',String(LK.until));lockTick();}
     hvReset();_loginLK(e);return;}
@@ -3452,9 +3505,9 @@ const _logoutLK=doLogout; doLogout=function(){_logoutLK();hvReset();try{const c=
 IC.end='<path d="M3 21h18M5 21V10M9 21V10M15 21V10M19 21V10M2 10l10-7 10 7z"/>';
 IC.ctb='<rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h8M8 15h5"/>';
 VIEWS.end={g:'Análise financeira',t:'Endividamento',d:'Indicadores de endividamento da empresa a partir dos balancetes e o cenário de juros, inflação e câmbio que afeta suas decisões.',fin:1};
-VIEWS.ctb={g:'Análise financeira',t:'Indicadores contábeis',d:'Balanço patrimonial, DRE gerencial e contábil e os principais indicadores de liquidez, estrutura, rentabilidade e atividade.',fin:1,avah:1};
+VIEWS.ctb={g:'Análise contábil',t:'Indicadores contábeis',d:'Balanço patrimonial, DRE gerencial e contábil e os principais indicadores de liquidez, estrutura, rentabilidade e atividade.',fin:1,avah:1};
 if(typeof ROLES!=='undefined'&&ROLES.gestor.views) ROLES.gestor.views.push('end','ctb');
-(function(){const f=NAVS.find(s=>s.k==='fin');if(f){const i=f.items.findIndex(x=>x.v==='dfc');f.items.splice(i+1,0,{v:'end'},{v:'ctb'});}})();
+(function(){const f=NAVS.find(s=>s.k==='fin');if(f){const i=f.items.findIndex(x=>x.v==='dfc');f.items.splice(i+1,0,{v:'end'});const k=NAVS.findIndex(s=>s.k==='fin');NAVS.splice(k+1,0,{k:'ctb',t:'Indicadores contábeis',ico:'ctb',items:[{v:'ctb',l:'Balanço patrimonial',a:'ctb-bp'},{v:'ctb',l:'DRE gerencial e contábil',a:'ctb-dre'},{v:'ctb',l:'Indicadores',a:'ctb-ind'}]});}})();
 
 /* ---------- cenário econômico (valores de referência com fonte e data) ---------- */
 const MACRO={
@@ -3624,6 +3677,102 @@ document.addEventListener('click',e=>{
   const c=e.target.closest('#v-end [data-con]');if(c){const k=c.dataset.con;openModal({kicker:'Cenário econômico',title:CON[k].t,body:'',concept:k});}
 });
 const _rtEnd=renderTables; renderTables=function(){_rtEnd();renderEnd();renderCtb();};
+
+/* ================= ESQUECI A SENHA + ALTERAR SENHA ================= */
+function openForgot(){
+  let o=document.getElementById('fg');
+  if(!o){o=document.createElement('div');o.id='fg';o.className='fg';o.setAttribute('role','dialog');o.setAttribute('aria-modal','true');document.body.appendChild(o);
+    o.addEventListener('click',e=>{if(e.target===o) closeForgot();});}
+  const u=document.getElementById('user').value.trim();
+  o.innerHTML=`<div class="fg-c"><h3>Esqueceu a senha?</h3><p>Informe seu usuário. Como o painel funciona sem servidor, a redefinição é feita neste navegador e a senha original é fornecida pelos administradores do painel.</p>
+    <input id="fgUser" placeholder="Seu usuário" autocomplete="username" value="${esc(u)}"><div id="fgOut"></div>
+    <div class="fg-a"><button class="fg-b" onclick="closeForgot()">Cancelar</button><button class="fg-b pri" onclick="doForgot()">Continuar</button></div></div>`;
+  o.classList.add('on');setTimeout(()=>document.getElementById('fgUser').focus(),30);
+}
+function closeForgot(){const o=document.getElementById('fg');if(o) o.classList.remove('on');}
+function doForgot(){
+  const u=document.getElementById('fgUser').value.trim().toLowerCase(),out=document.getElementById('fgOut');
+  if(!USERS[u]){out.innerHTML='<div class="fg-msg err">Usuário não encontrado. Confira o nome digitado.</div>';return;}
+  const has=!!pwOverride(u);
+  out.innerHTML=has?`<div class="fg-msg">A senha deste usuário foi alterada neste navegador. Você pode desfazer a alteração e voltar a usar a senha original, fornecida pelos administradores.</div><div class="fg-a" style="margin:0 0 12px"><button class="fg-b pri" onclick="resetPw('${u}')">Restaurar senha original</button></div>`
+    :`<div class="fg-msg">Solicite a senha de acesso aos administradores do painel (autores do TCC). Por segurança, ela não é exibida aqui.</div>`;
+}
+function resetPw(u){try{localStorage.removeItem('cvl-pw:'+u)}catch(e){}try{const c=JSON.parse(lsGet('cvl-rem-cred','null'));if(c&&c.u.toLowerCase()===u){localStorage.removeItem('cvl-rem-cred');document.getElementById('pass').value='';}}catch(e){}
+  document.getElementById('fgOut').innerHTML='<div class="fg-msg ok">Pronto. A senha original voltou a valer para este usuário neste navegador.</div>';}
+document.addEventListener('keydown',e=>{const o=document.getElementById('fg');if(!o||!o.classList.contains('on')) return;if(e.key==='Escape') closeForgot();if(e.key==='Enter'&&e.target.id==='fgUser'){e.preventDefault();doForgot();}});
+
+function pwScore(p){let s=0;if(p.length>=6)s++;if(p.length>=10)s++;if(/[A-Z]/.test(p)&&/[a-z]/.test(p))s++;if(/\d/.test(p))s++;if(/[^A-Za-z0-9]/.test(p))s++;return s;}
+function openChangePw(){
+  const body=`<div class="cp"><label for="cpA">Senha atual</label><input id="cpA" type="password" autocomplete="current-password">
+   <label for="cpN">Nova senha</label><input id="cpN" type="password" autocomplete="new-password"><div class="cp-str"><i id="cpS"></i></div><div class="cp-hint" id="cpH">Use ao menos 6 caracteres; combine letras, números e símbolos.</div>
+   <label for="cpC">Confirmar nova senha</label><input id="cpC" type="password" autocomplete="new-password">
+   <div class="cp-msg" id="cpM" role="alert"></div>
+   <div class="pf-act"><button class="btn primary" data-cp="save">Salvar nova senha</button>${pwOverride(CUR.u)?'<button class="btn" data-cp="reset">Voltar à senha original</button>':''}</div>
+   <p class="muted" style="font-size:12px;color:var(--ink-3)">A nova senha vale para o usuário <b>${esc(CUR.u)}</b> neste navegador. Em outro computador, continua valendo a senha original.</p></div>`;
+  openModal({kicker:'Segurança',title:'Alterar senha',body,src:''});document.getElementById('ov').classList.add('cp-on');
+  setTimeout(()=>document.getElementById('cpA').focus(),30);
+}
+document.addEventListener('input',e=>{if(e.target.id!=='cpN') return;const s=pwScore(e.target.value),i=document.getElementById('cpS');i.style.width=(s/5*100)+'%';i.style.background=['var(--neg)','var(--neg)','#F59E0B','#F59E0B','var(--pos)','var(--pos)'][s];document.getElementById('cpH').textContent=['Muito fraca','Fraca','Razoável','Boa','Forte','Muito forte'][s]+' — use ao menos 6 caracteres; combine letras, números e símbolos.';});
+document.addEventListener('click',e=>{const b=e.target.closest('[data-cp]');if(!b) return;const M=document.getElementById('cpM');
+  if(b.dataset.cp==='reset'){try{localStorage.removeItem('cvl-pw:'+CUR.u)}catch(x){}closeModal();if(typeof toast==='function') toast('Senha original restaurada','ok');return;}
+  const a=document.getElementById('cpA').value,n=document.getElementById('cpN').value,c=document.getElementById('cpC').value;
+  if(!checkPw(CUR.u,a)){M.className='cp-msg err';M.textContent='A senha atual está incorreta.';return;}
+  if(n.length<6){M.className='cp-msg err';M.textContent='A nova senha precisa ter ao menos 6 caracteres.';return;}
+  if(n!==c){M.className='cp-msg err';M.textContent='A confirmação não confere com a nova senha.';return;}
+  if(n===a){M.className='cp-msg err';M.textContent='A nova senha deve ser diferente da atual.';return;}
+  lsSet('cvl-pw:'+CUR.u,sha256('cvl|'+CUR.u+'|'+n));
+  try{const r=JSON.parse(lsGet('cvl-rem-cred','null'));if(r&&r.u.toLowerCase()===CUR.u) lsSet('cvl-rem-cred',JSON.stringify({u:r.u,p:enc(n)}));}catch(x){}
+  try{if(window.PasswordCredential&&navigator.credentials) navigator.credentials.store(new PasswordCredential({id:CUR.u,password:n,name:CUR.n})).catch(()=>{});}catch(x){}
+  closeModal();if(typeof toast==='function') toast('Senha alterada com sucesso','ok');
+});
+/* item no menu do perfil */
+const _rtuPw=renderTopUser; renderTopUser=function(){_rtuPw();const m=document.querySelector('#topUser .tu-m');if(!m||m.querySelector('[data-cpopen]')) return;const p=[...m.querySelectorAll('button')].find(b=>/Meu perfil/.test(b.textContent));const btn=`<button role="menuitem" data-cpopen="1" onclick="openChangePw()"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Alterar senha</button>`;if(p) p.insertAdjacentHTML('afterend',btn);else m.insertAdjacentHTML('beforeend',btn);};
+
+const _cmCp=closeModal; closeModal=function(){_cmCp.apply(this,arguments);document.getElementById('ov').classList.remove('cp-on');};
+
+/* ================= TELAS SEPARADAS POR RAMIFICAÇÃO ================= */
+const SUBD={
+ 'emp-perfil':'Identificação, porte, regime tributário e números gerais da empresa.',
+ 'emp-org':'Como a gestão e as áreas da empresa estão organizadas.',
+ 'emp-proc':'Etapas do processamento da madeira, da tora ao produto vendido.',
+ 'emp-imob':'Bens em operação, depreciação acumulada e valor líquido conforme o balancete.',
+ 'emp-prod':'Linhas de produtos e espécies de madeira comercializadas.',
+ 'rh-ind':'Principais números do quadro de pessoal no período analisado.',
+ 'rh-custo':'Custo mensal com pessoal, separado entre produção e administrativo.',
+ 'rh-prov':'Obrigações trabalhistas e provisões registradas no passivo circulante.',
+ 'rh-quadro':'Distribuição dos colaboradores por setor.',
+ 'ctb-bp':'Saldos de ativo, passivo e patrimônio líquido no fim de cada mês, com análise vertical e horizontal.',
+ 'ctb-dre':'Resultado do período nas óticas gerencial (custo-volume-lucro) e contábil (balancetes).',
+ 'ctb-ind':'Liquidez, estrutura de capital, rentabilidade, margens e atividade.'
+};
+const SUBV={},SUBSEC={},SUB={};
+NAVS.forEach(s=>(s.items||[]).forEach(it=>{if(!it.a) return;(SUBV[it.v]=SUBV[it.v]||[]).push({a:it.a,l:it.l});SUBSEC[it.v]=s.t;}));
+function subOf(v){const L=SUBV[v];if(!L) return null;return L.find(x=>x.a===SUB[v])||L[0];}
+function applySub(){
+  const v=ST.view,L=SUBV[v];const el=document.getElementById('v-'+v);
+  if(!L||!el) return;
+  const cur=subOf(v);SUB[v]=cur.a;
+  L.forEach(x=>{const t=document.getElementById(x.a);if(t) t.classList.toggle('sub-hide',x.a!==cur.a);});
+  document.getElementById('crGroup').textContent=SUBSEC[v];document.getElementById('crPage').textContent=cur.l;
+  document.getElementById('vTitle').textContent=cur.l;document.getElementById('vDesc').textContent=SUBD[cur.a]||VIEWS[v].d;
+  el.querySelectorAll('[data-ctbgo]').forEach(b=>b.classList.toggle('on',b.dataset.ctbgo===cur.a));
+  const i=L.indexOf(cur);let pg=el.querySelector(':scope > .sub-pager');
+  if(!pg){pg=document.createElement('div');pg.className='sub-pager';el.appendChild(pg);}else el.appendChild(pg);
+  const P=L[i-1],N=L[i+1];
+  pg.innerHTML=`${P?`<button class="sp-b" data-sub="${v}|${P.a}"><span>‹ Anterior</span><b>${esc(P.l)}</b></button>`:'<span></span>'}<span class="sp-n">${i+1} de ${L.length}</span>${N?`<button class="sp-b nx" data-sub="${v}|${N.a}"><span>Próximo ›</span><b>${esc(N.l)}</b></button>`:'<span></span>'}`;
+  markNav();
+}
+function goSub(v,a){SUB[v]=a;NAVSEL=null;if(ST.view!==v) show(v);else applySub();window.scrollTo({top:0,behavior:'auto'});}
+const _mkSub=markNav; markNav=function(){_mkSub();const v=ST.view;if(!SUBV[v]) return;const b=document.querySelector(`#sideNav .nav-b[data-view="${v}"][data-anchor="${SUB[v]||SUBV[v][0].a}"]`);if(!b) return;
+  document.querySelectorAll('#sideNav .nav-b').forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('#sideNav .nsec').forEach(s=>{const h=s.contains(b);s.classList.toggle('has-active',h);if(h&&!s.classList.contains('open')){s.classList.add('open');s.querySelector('.nsec-h').setAttribute('aria-expanded','true');}});};
+const _bnSub=buildNav; buildNav=function(){_bnSub();document.querySelectorAll('#sideNav .nav-b[data-anchor]').forEach(b=>{if(!SUBV[b.dataset.view]) return;b.onclick=()=>{goSub(b.dataset.view,b.dataset.anchor);if(typeof closeSideMobile==='function') closeSideMobile();};});};
+const _shSub=show; show=function(v){_shSub(v);applySub();};
+['renderEmp','renderRh','renderCtb'].forEach(n=>{if(typeof window[n]!=='function') return;const o=window[n];window[n]=function(){const r=o.apply(this,arguments);if(ST&&SUBV[ST.view]&&('v-'+ST.view)===({renderEmp:'v-emp',renderRh:'v-rh',renderCtb:'v-ctb'})[n]) applySub();return r;};});
+document.addEventListener('click',e=>{const g=e.target.closest('[data-ctbgo]');if(g){e.stopImmediatePropagation();goSub('ctb',g.dataset.ctbgo);return;}
+  const s=e.target.closest('[data-sub]');if(s){const [v,a]=s.dataset.sub.split('|');goSub(v,a);}},true);
+document.addEventListener('keydown',e=>{if(!SUBV[ST.view]||e.altKey===false) return;if(e.key!=='ArrowRight'&&e.key!=='ArrowLeft') return;const L=SUBV[ST.view],i=L.indexOf(subOf(ST.view)),j=i+(e.key==='ArrowRight'?1:-1);if(L[j]){e.preventDefault();goSub(ST.view,L[j].a);}});
+if(document.getElementById('app')&&document.getElementById('app').classList.contains('on')){buildNav();applySub();}
 
 </script>
 </body>
