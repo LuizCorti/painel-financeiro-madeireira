@@ -1419,11 +1419,15 @@ tr.ac-late td{background:color-mix(in srgb,var(--neg) 4%,transparent)}
 .ac-f select{height:46px;padding:0 10px}.ac-f2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.ac-f2>div{display:grid;gap:6px}
 .ac-view{display:grid;grid-template-columns:1fr 1fr;gap:10px}.ac-view div{background:var(--surface-2);border-radius:10px;padding:10px 12px}.ac-view span{display:block;font-size:11.5px;color:var(--ink-3)}.ac-view p{grid-column:1/-1}
 .rx-bar{display:flex;justify-content:space-between;align-items:center;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin-bottom:18px}.rx-bar b{display:block}.rx-bar span{font-size:12.5px;color:var(--ink-3)}
-.rex-page{width:210mm;max-width:100%;min-height:297mm;margin:0 auto;background:#fff;color:#111827;padding:14mm 13mm;box-shadow:0 20px 50px -24px rgba(30,27,75,.4);border-radius:6px;font-size:11.5px;display:flex;flex-direction:column;gap:12px}
+.rex-page{width:210mm;max-width:100%;min-height:297mm;box-sizing:border-box;font-size:12px;gap:16px;margin:0 auto;background:#fff;color:#111827;padding:14mm 13mm;box-shadow:0 20px 50px -24px rgba(30,27,75,.4);border-radius:6px;font-size:11.5px;display:flex;flex-direction:column;gap:12px}
 .rx-h{display:flex;align-items:center;gap:14px;border-bottom:2px solid #4F46E5;padding-bottom:12px}.rx-h h1{font-size:22px;margin:0;font-weight:800;letter-spacing:-.02em;color:#111827}.rx-h p{margin:2px 0 0;color:#6B7280}.rx-d{margin-left:auto;color:#6B7280;font-size:11px}
 .rx-logo{width:52px;height:52px;object-fit:contain}.rx-mk{width:48px;height:48px;border-radius:12px;background:#4F46E5;color:#fff;display:grid;place-items:center;font-weight:800;font-size:13px}
 .rx-kg{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.rx-k{border:1px solid #E5E7EB;border-radius:8px;padding:8px 10px}.rx-k span{display:block;font-size:10px;color:#6B7280;font-weight:600;text-transform:uppercase;letter-spacing:.04em}.rx-k b{display:block;font-size:15.5px;margin:2px 0;color:#111827}.rx-k em{font-style:normal;font-size:10px;color:#6B7280}
-.rx-2{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:18px}
+.rx-2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;align-items:stretch}
+.rx-box{border:1px solid #E5E7EB;border-radius:8px;padding:10px 12px}.rx-box h2{margin-top:0}
+.rx-t td,.rx-t th{white-space:normal}
+.rx-ac td{text-align:left!important;vertical-align:top}.rx-ac td:first-child{width:62%}.rx-ac th{text-align:left!important}
+.rex-page section{break-inside:avoid}
 .panel .legend{padding:4px 20px 14px}
 .cy-t{font-size:13px}
 .rex-page h2{font-size:12.5px;margin:4px 0 6px;color:#4F46E5;text-transform:uppercase;letter-spacing:.05em}
@@ -1454,6 +1458,10 @@ tr.ac-late td{background:color-mix(in srgb,var(--neg) 4%,transparent)}
 .gb-n,.gb-x{position:absolute;border:0;background:rgba(255,255,255,.12);color:#fff;width:46px;height:46px;border-radius:50%;font-size:26px;cursor:pointer}.gb-n.p{left:20px;top:50%}.gb-n.n{right:20px;top:50%}.gb-x{top:20px;right:20px}
 @media(max-width:1100px){.ik-grid.gk{grid-template-columns:repeat(2,minmax(0,1fr))}.g-two{grid-template-columns:1fr}.pj-form{grid-template-columns:repeat(2,minmax(0,1fr))}.hist-body{grid-template-columns:1fr}}
 @media(max-width:640px){.pj-cards,.ac-board{grid-template-columns:1fr}.pj-form,.ac-f2,.rx-2,.al-m{grid-template-columns:1fr 1fr}.rx-kg{grid-template-columns:repeat(2,1fr)}.rx-bar{flex-direction:column;align-items:stretch}.dp-n{min-width:0;width:100%}.dp-op{display:none}.ik-grid.gk .ik b{font-size:18px}}
+
+/* funções dos funcionários */
+.fn-t th,.fn-t td{text-align:left!important}.fn-t th:nth-child(4),.fn-t td:nth-child(4){text-align:center!important}.fn-r{cursor:pointer}.fn-r td{vertical-align:top}.fn-t td{padding-top:12px!important;padding-bottom:12px!important}
+.fn-pend{font-size:11.5px;font-weight:700;color:#B45309;background:#FEF3C7;border-radius:999px;padding:2px 9px}
 </style>
 </head>
 <body>
@@ -3373,7 +3381,7 @@ if(typeof ROLES!=='undefined'&&ROLES.gestor.views) ROLES.gestor.views.push('emp'
 const NAVS=[
  {k:'ini',single:'ini'},
  {k:'emp',t:'Estrutura da empresa',ico:'emp',items:[{v:'emp',l:'Perfil e porte',a:'emp-perfil'},{v:'emp',l:'Organograma',a:'emp-org'},{v:'emp',l:'Processo produtivo',a:'emp-proc'},{v:'emp',l:'Estrutura física',a:'emp-imob'},{v:'emp',l:'Produtos e espécies',a:'emp-prod'}]},
- {k:'rh',t:'Quadro de funcionários',ico:'rh',items:[{v:'rh',l:'Indicadores de pessoal',a:'rh-ind'},{v:'rh',l:'Custo de pessoal',a:'rh-custo'},{v:'rh',l:'Obrigações e provisões',a:'rh-prov'},{v:'rh',l:'Quadro por setor',a:'rh-quadro'}]},
+ {k:'rh',t:'Quadro de funcionários',ico:'rh',items:[{v:'rh',l:'Indicadores e custo de pessoal',a:'rh-ind'},{v:'rh',l:'Obrigações e provisões',a:'rh-prov'},{v:'rh',l:'Quadro por setor',a:'rh-quadro'}]},
  {k:'fin',t:'Análise financeira',ico:'fin',items:['fin','fat','abc','mes','grp','cus','dfc','con','mem','src'].map(v=>({v}))},
  {k:'acad',t:'Trabalho acadêmico',ico:'apr',items:[{v:'apt'},...['apr','idt','tema','met','rel'].map(v=>({v}))]},
 ];
@@ -4144,7 +4152,7 @@ function renderRex(){
   const k=(l,v,s)=>`<div class="rx-k"><span>${l}</span><b>${v}</b><em>${s}</em></div>`;
   const F=i=>DATA.financeiro[i].vals;
   const dre=[['Receita de vendas',0],['(−) Custos e despesas variáveis',1],['= Margem de contribuição',5],['(−) Custos e despesas fixos',2],['= Resultado gerencial',7]].map(([l,i])=>`<tr class="${i===7?'b':''}"><td>${l}</td>${[0,1,2,3].map(j=>`<td>${fM0((i===1||i===2?-1:1)*F(i)[j][0])}</td>`).join('')}</tr>`).join('');
-  const prox=A.filter(x=>x.s!=='done').sort((a,b)=>(a.p||'9').localeCompare(b.p||'9')).slice(0,5);
+  const prox=A.filter(x=>x.s!=='done').sort((a,b)=>(a.p||'9').localeCompare(b.p||'9')).slice(0,4);
   const done=A.filter(x=>x.s==='done').length;
   const logo=MED.logo?`<img src="${MED.logo}" alt="Logo da empresa" class="rx-logo">`:`<div class="rx-mk">CVL</div>`;
   const conc=[`Margem de contribuição de <b>${fP(p.MCp)}</b> e margem de segurança de <b>${fP(p.MS)}</b> no trimestre: as vendas estão bem acima do ponto de equilíbrio (R$ ${fM0(p.PEC)}).`,
@@ -4155,12 +4163,12 @@ function renderRex(){
   <div class="rex-page">
    <header class="rx-h">${logo}<div><h1>Relatório executivo</h1><p>Análise custo-volume-lucro · trimestre maio a julho de 2026</p></div><div class="rx-d">Emitido em ${new Date().toLocaleDateString('pt-BR')}</div></header>
    <div class="rx-kg">${k('Receita de vendas',rs0(p.R),'relatórios de vendas')}${k('Margem de contribuição',fP(p.MCp),rs0(p.MC))}${k('Resultado gerencial',rs0(p.RES),fP(p.RES/m.RES)+' da meta')}${k('Lucro líquido contábil',rs0(LL),'balancetes')}${k('Ponto de equilíbrio',rs0(p.PEC),'contábil')}${k('Margem de segurança',fP(p.MS),'acima do equilíbrio')}${k('Liquidez corrente',fN(BPV('Ativo circulante')[3]/BPV('Passivo circulante')[3],2),'31/07/2026')}${k('Ciclo financeiro',fN(cy.cf,0)+' dias','NCG '+rs0(f.NCG))}</div>
+   <section><h2>Resultado gerencial (R$)</h2><table class="rx-t"><thead><tr><th></th><th>Maio/26</th><th>Junho/26</th><th>Julho/26</th><th>Trimestre</th></tr></thead><tbody>${dre}</tbody></table></section>
    <div class="rx-2">
-    <section><h2>Resultado gerencial (R$)</h2><table class="rx-t"><thead><tr><th></th><th>Mai</th><th>Jun</th><th>Jul</th><th>Tri</th></tr></thead><tbody>${dre}</tbody></table>
-     <h2>Retorno (Dupont, trimestre)</h2><p class="rx-p">ROE ${fP(d.roe)} = margem líquida ${fP(d.ml)} × giro ${fN(d.ga,3)} × multiplicador ${fN(d.mf,3)}.</p></section>
-    <section><h2>Alertas de julho</h2>${act.length?`<ul class="rx-ul al">${act.map(a=>`<li>${esc(a.t)}: <b>${alrFmt(a,a.fn(2))}</b></li>`).join('')}</ul>`:'<p class="rx-p">Nenhum indicador fora da faixa.</p>'}
-     <h2>Plano de ação · ${done} de ${A.length} concluídas</h2><ul class="rx-ul">${prox.map(x=>`<li>${esc(x.a)} <em>${esc(x.ar)} · ${dBR(x.p)}</em></li>`).join('')}</ul></section>
+    <section class="rx-box"><h2>Alertas de julho</h2>${act.length?`<ul class="rx-ul al">${act.map(a=>`<li>${esc(a.t)}: <b>${alrFmt(a,a.fn(2))}</b></li>`).join('')}</ul>`:'<p class="rx-p">Nenhum indicador fora da faixa.</p>'}</section>
+    <section class="rx-box"><h2>Retorno (Dupont, trimestre)</h2><p class="rx-p">ROE <b>${fP(d.roe)}</b> = margem líquida ${fP(d.ml)} × giro do ativo ${fN(d.ga,3)} × multiplicador do PL ${fN(d.mf,3)}.</p><p class="rx-p">ROA ${fP(d.roa)} · disponível ${fP(DI/AT)} do ativo · sem dívida financeira.</p></section>
    </div>
+   <section><h2>Plano de ação · ${done} de ${A.length} concluídas · próximas ações</h2><table class="rx-t rx-ac"><thead><tr><th>Ação</th><th>Área</th><th>Responsável</th><th>Prazo</th></tr></thead><tbody>${prox.map(x=>`<tr><td>${esc(x.a)}</td><td>${esc(x.ar)}</td><td>${esc(x.r||'a definir')}</td><td>${dBR(x.p)}</td></tr>`).join('')}</tbody></table></section>
    <section><h2>Conclusões</h2><ul class="rx-ul">${conc.map(c=>`<li>${c}</li>`).join('')}</ul></section>
    <footer class="rx-f"><span>Painel CVL · valores gerenciais e contábeis da empresa estudada</span><span>Powered by LuizCorti</span></footer>
   </div>`;
@@ -4258,6 +4266,53 @@ document.addEventListener('dragover',e=>{const col=e.target.closest&&e.target.cl
 document.addEventListener('drop',e=>{const col=e.target.closest&&e.target.closest('.ac-col');if(!col||!ACDRAG) return;e.preventDefault();const A=acGet(),x=A.find(q=>q.id===ACDRAG);if(x){x.s=col.dataset.acol;acSet(A);}ACDRAG=null;rerG();});
 medLoad();
 
+/* =============== FUNÇÕES DOS FUNCIONÁRIOS =============== */
+(function(){const r=NAVS.find(s=>s.k==='rh');if(r) r.items.push({v:'rh',l:'Funções dos funcionários',a:'rh-func'});})();
+const FN_SET=['Gestão','Produção','Comercial e entregas','Administrativo e financeiro'];
+const FN_DEF=[
+ ['Sócio-gerente','Gestão','Decisões estratégicas, compra de toras, negociação com clientes e fornecedores.','—'],
+ ['Operador de serra','Produção','Desdobro das toras em peças brutas e controle do rendimento.','Sócio-gerente'],
+ ['Auxiliar de produção','Produção','Beneficiamento: ripas, guias, tábuas, caibros e planchas; organização do pátio.','Sócio-gerente'],
+ ['Operador de tratamento','Produção','Tratamento do pinus em autoclave e acabamento das peças.','Sócio-gerente'],
+ ['Vendedor','Comercial e entregas','Atendimento, orçamentos e pedidos de venda.','Sócio-gerente'],
+ ['Motorista','Comercial e entregas','Carregamento e entrega dos pedidos com a frota própria.','Vendedor'],
+ ['Auxiliar administrativo','Administrativo e financeiro','Contas a pagar e a receber, folha, notas fiscais e contato com a contabilidade.','Sócio-gerente'],
+];
+function fnGet(){const a=jget('cvl-func',null);return Array.isArray(a)?a:FN_DEF.map((x,i)=>({id:'f'+(i+1),f:x[0],s:x[1],at:x[2],rp:x[3],q:'',j:'',rq:'',ob:''}));}
+function fnSet(a){jset('cvl-func',a);}
+function fnHtml(){const A=fnGet(),ed=canGes(),filled=A.filter(x=>x.q!==''&&x.q!=null),tot=filled.reduce((s,x)=>s+(+x.q||0),0);
+  const bySet=FN_SET.map(s=>({s,n:A.filter(x=>x.s===s).length,q:A.filter(x=>x.s===s).reduce((t,x)=>t+(+x.q||0),0)}));
+  const rows=FN_SET.map(s=>{const L=A.filter(x=>x.s===s);if(!L.length) return '';return `<tr class="r-grp"><td colspan="${ed?7:6}">${esc(s)}</td></tr>`+L.map(x=>`<tr data-fnid="${x.id}" class="fn-r"><td><b>${esc(x.f)}</b></td><td style="white-space:normal;min-width:260px">${esc(x.at||'—')}</td><td>${esc(x.rp||'—')}</td><td style="text-align:center">${x.q===''||x.q==null?'<span class="fn-pend">a preencher</span>':esc(x.q)}</td><td>${esc(x.j||'—')}</td><td style="white-space:normal">${esc(x.rq||'—')}</td>${ed?`<td style="text-align:center"><button class="lnk" data-fnedit="${x.id}">Editar</button></td>`:''}</tr>`).join('');}).join('');
+  return `<div id="rh-func">
+  <div class="ik-grid gk">${kpG('Funções cadastradas',A.length,FN_SET.filter(s=>A.some(x=>x.s===s)).length+' setores')}${kpG('Funcionários informados',filled.length?tot:'—',filled.length+' de '+A.length+' funções com quantidade')}${kpG('Produção',bySet[1].q||'—',bySet[1].n+' funções')}${kpG('Comercial e administrativo',(bySet[2].q+bySet[3].q)||'—',(bySet[2].n+bySet[3].n)+' funções')}</div>
+  <div class="panel"><div class="panel-head"><div><div class="panel-title">Funções dos funcionários</div><div class="panel-sub">${ed?'Preencha a quantidade de pessoas, as atribuições e os requisitos de cada função. Clique em uma linha para editar.':'Cadastro de funções preenchido pela gestão.'}</div></div><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn" data-fncsv="1">${ic('dl')}Exportar</button>${ed?`<button class="btn primary" data-fnnew="1">${ic('plus')}Nova função</button>`:''}</div></div>
+   <div class="tw"><table class="fn-t"><thead><tr><th>Função</th><th>Principais atribuições</th><th>Responde a</th><th style="text-align:center">Nº de pessoas</th><th>Jornada</th><th>Requisitos</th>${ed?'<th></th>':''}</tr></thead><tbody>${rows}</tbody></table></div>
+   <div class="note">As funções iniciais seguem o processo produtivo e o organograma do estudo e servem de ponto de partida; ajuste os nomes e atribuições à realidade da empresa. Não é preciso informar nomes de pessoas. Os dados ficam salvos neste navegador e entram no backup.</div></div></div>`;}
+function fnForm(x){const isNew=!x;x=x||{id:'f'+Date.now(),f:'',s:'Produção',at:'',rp:'',q:'',j:'',rq:'',ob:''};
+  const A=fnGet(),opt=FN_SET.map(s=>`<option ${s===x.s?'selected':''}>${s}</option>`).join(''),rps=[...new Set(['—',...A.map(a=>a.f)])].filter(f=>f!==x.f||f==='—');
+  openModal({kicker:'Quadro de funcionários',title:isNew?'Nova função':'Editar função',src:'',body:`<div class="cp ac-f">
+   <div class="ac-f2"><div><label>Função</label><input id="fnF" value="${esc(x.f)}" placeholder="Ex.: Operador de serra"></div><div><label>Setor</label><select id="fnS">${opt}</select></div></div>
+   <label>Principais atribuições</label><textarea id="fnAt" rows="3">${esc(x.at)}</textarea>
+   <div class="ac-f2"><div><label>Responde a</label><input id="fnRp" list="fnRpL" value="${esc(x.rp)}"><datalist id="fnRpL">${rps.map(r=>`<option value="${esc(r)}">`).join('')}</datalist></div><div><label>Nº de pessoas</label><input id="fnQ" type="number" min="0" step="1" value="${esc(x.q)}"></div></div>
+   <div class="ac-f2"><div><label>Jornada</label><input id="fnJ" value="${esc(x.j)}" placeholder="Ex.: 44 h semanais"></div><div><label>Requisitos</label><input id="fnRq" value="${esc(x.rq)}" placeholder="Ex.: CNH categoria C"></div></div>
+   <label>Observações</label><textarea id="fnOb" rows="2">${esc(x.ob)}</textarea>
+   <div class="cp-msg" id="fnM"></div>
+   <div class="pf-act"><button class="btn primary" data-fnsave="${isNew?'new':x.id}">Salvar</button>${isNew?'':`<button class="btn" data-fndel="${x.id}">${ic('trash')}Excluir</button>`}</div></div>`});
+  document.getElementById('ov').classList.add('cp-on');}
+function fnView(x){openModal({kicker:'Quadro de funcionários',title:x.f,src:'',body:`<div class="ac-view"><div><span>Setor</span><b>${esc(x.s)}</b></div><div><span>Responde a</span><b>${esc(x.rp||'—')}</b></div><div><span>Nº de pessoas</span><b>${x.q===''?'a preencher':esc(x.q)}</b></div><div><span>Jornada</span><b>${esc(x.j||'—')}</b></div><p><b>Atribuições:</b> ${esc(x.at||'—')}</p>${x.rq?`<p><b>Requisitos:</b> ${esc(x.rq)}</p>`:''}${x.ob?`<p>${esc(x.ob)}</p>`:''}</div>`});}
+const _rrFn=renderRh; renderRh=function(){_rrFn();const el=document.getElementById('v-rh');if(el&&!document.getElementById('rh-func')) el.insertAdjacentHTML('beforeend',fnHtml());};
+function rerFn(){renderRh();if(typeof applySub==='function') applySub();}
+document.addEventListener('click',e=>{const t=e.target;
+  if(t.closest('[data-fnnew]')){fnForm(null);return;}
+  if(t.closest('[data-fncsv]')){const q=s=>'"'+String(s==null?'':s).replace(/"/g,'""')+'"';dlFile('funcoes-funcionarios.csv','﻿'+[['Função','Setor','Atribuições','Responde a','Nº de pessoas','Jornada','Requisitos','Observações'],...fnGet().map(x=>[x.f,x.s,x.at,x.rp,x.q,x.j,x.rq,x.ob])].map(r=>r.map(q).join(';')).join('\r\n'),'text/csv;charset=utf-8');return;}
+  const sv=t.closest('[data-fnsave]');if(sv){const f=document.getElementById('fnF').value.trim(),M=document.getElementById('fnM');if(!f){M.className='cp-msg err';M.textContent='Informe o nome da função.';return;}
+    const A=fnGet(),id=sv.dataset.fnsave==='new'?'f'+Date.now():sv.dataset.fnsave;let x=A.find(a=>a.id===id);if(!x){x={id};A.push(x);}
+    const qv=document.getElementById('fnQ').value;Object.assign(x,{f,s:document.getElementById('fnS').value,at:document.getElementById('fnAt').value.trim(),rp:document.getElementById('fnRp').value.trim(),q:qv===''?'':String(Math.max(0,Math.round(+qv))),j:document.getElementById('fnJ').value.trim(),rq:document.getElementById('fnRq').value.trim(),ob:document.getElementById('fnOb').value.trim()});
+    fnSet(A);closeModal();rerFn();toast&&toast('Função salva','ok');return;}
+  const dl=t.closest('[data-fndel]');if(dl){fnSet(fnGet().filter(a=>a.id!==dl.dataset.fndel));closeModal();rerFn();toast&&toast('Função excluída','ok');return;}
+  const r=t.closest('[data-fnid]');if(r){const x=fnGet().find(a=>a.id===r.dataset.fnid);if(x) (canGes()?fnForm(x):fnView(x));return;}
+});
+
 /* ================= TELAS SEPARADAS POR RAMIFICAÇÃO ================= */
 const SUBD={
  'emp-hist':'Trajetória da empresa, marcos, logo e fotos da estrutura física.',
@@ -4267,22 +4322,24 @@ const SUBD={
  'emp-proc':'Etapas do processamento da madeira, da tora ao produto vendido.',
  'emp-imob':'Bens em operação, depreciação acumulada e valor líquido conforme o balancete.',
  'emp-prod':'Linhas de produtos e espécies de madeira comercializadas.',
- 'rh-ind':'Principais números do quadro de pessoal no período analisado.',
+ 'rh-ind':'Principais números do quadro de pessoal e o custo mensal com pessoal, separado entre produção e administrativo.',
  'rh-custo':'Custo mensal com pessoal, separado entre produção e administrativo.',
  'rh-prov':'Obrigações trabalhistas e provisões registradas no passivo circulante.',
+ 'rh-func':'Cadastro das funções: atribuições, a quem cada uma responde, número de pessoas, jornada e requisitos.',
  'rh-quadro':'Distribuição dos colaboradores por setor.',
  'ctb-bp':'Saldos de ativo, passivo e patrimônio líquido no fim de cada mês, com análise vertical e horizontal.',
  'ctb-dre':'Resultado do período nas óticas gerencial (custo-volume-lucro) e contábil (balancetes).',
  'ctb-ind':'Liquidez, estrutura de capital, rentabilidade, margens e atividade.'
 };
 const SUBV={},SUBSEC={},SUB={};
+const SUBX={'rh-ind':['rh-custo']}; /* telas que juntam mais de um bloco */
 NAVS.forEach(s=>(s.items||[]).forEach(it=>{if(!it.a) return;(SUBV[it.v]=SUBV[it.v]||[]).push({a:it.a,l:it.l});SUBSEC[it.v]=s.t;}));
 function subOf(v){const L=SUBV[v];if(!L) return null;return L.find(x=>x.a===SUB[v])||L[0];}
 function applySub(){
   const v=ST.view,L=SUBV[v];const el=document.getElementById('v-'+v);
   if(!L||!el) return;
   const cur=subOf(v);SUB[v]=cur.a;
-  L.forEach(x=>{const t=document.getElementById(x.a);if(t) t.classList.toggle('sub-hide',x.a!==cur.a);});
+  L.forEach(x=>{[x.a,...(SUBX[x.a]||[])].forEach(id=>{const t=document.getElementById(id);if(t) t.classList.toggle('sub-hide',x.a!==cur.a);});});
   document.getElementById('crGroup').textContent=SUBSEC[v];document.getElementById('crPage').textContent=cur.l;
   document.getElementById('vTitle').textContent=cur.l;document.getElementById('vDesc').textContent=SUBD[cur.a]||VIEWS[v].d;
   el.querySelectorAll('[data-ctbgo]').forEach(b=>b.classList.toggle('on',b.dataset.ctbgo===cur.a));
